@@ -6,20 +6,24 @@ using UnityEngine.InputSystem;
 
 public class PlayerController : MonoBehaviour
 {
-    [SerializeField] private float m_speed;
-
+    private Movement m_movement;
+    public Inventory m_inventory;
 
     private PlayerControll m_Input;
     private Vector2 m_MoveInputValue;
-    private bool m_AttackInputValue;
 
     private Animator m_Animator;
 
     private void OnEnable()
     {
+        m_inventory = new Inventory(21);
+
         m_Animator = GetComponent<Animator>();
+        m_movement = GetComponent<Movement>();
         m_Input = new PlayerControll();
         m_Input.Enable();
+
+        
     }
     private void OnDisable()
     {
@@ -28,15 +32,16 @@ public class PlayerController : MonoBehaviour
     private void Update()
     {
         m_MoveInputValue = m_Input.Player.Move.ReadValue<Vector2>();
+
         m_Input.Player.Attack.started += _ => Attack();
     }
 
     private void FixedUpdate()
     {
-        transform.Translate(m_MoveInputValue * Time.deltaTime * m_speed);
+        m_movement.Move(m_MoveInputValue);
         AnimatorMovement(m_MoveInputValue);
     }
-    void AnimatorMovement(Vector2 direction)
+       void AnimatorMovement(Vector2 direction)
     {
         if (m_Animator != null)
         {
@@ -44,6 +49,7 @@ public class PlayerController : MonoBehaviour
             {
                 m_Animator.SetFloat("horizontal", direction.x);
                 m_Animator.SetFloat("vertical", direction.y);
+
                 m_Animator.SetBool("isWalking", true);
             }
             else
@@ -52,8 +58,23 @@ public class PlayerController : MonoBehaviour
             }
         }
     }
+
+
     private void Attack()
     {
+        m_Animator.SetBool("isWalking", false);
         m_Animator.SetTrigger("Attack");
+    }
+    public void DropItem(Collectable item)
+    {
+        Vector2 SpawLocation = transform.position; ;
+
+
+
+        Vector2 SpawOffset = UnityEngine.Random.insideUnitCircle * 1.25f;
+
+        Collectable DropItem =  Instantiate(item, SpawLocation + SpawOffset, Quaternion.identity);
+
+        DropItem.m_Rigidbody.AddForce(SpawOffset * 2f, ForceMode2D.Impulse);
     }
 }

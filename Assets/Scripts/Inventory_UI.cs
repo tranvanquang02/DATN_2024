@@ -22,12 +22,14 @@ public class Inventory_UI : MonoBehaviour
     public void ToggleInventory()
     {
         if (!m_inventory.activeSelf)
-        {   
+        {
             m_inventory.SetActive(true);
+            m_player.m_Animator.enabled = false;
         }
         else
         {
             m_inventory.SetActive(false);
+            m_player.m_Animator.enabled = true;
         }
     }
     public void Refresh()
@@ -49,7 +51,7 @@ public class Inventory_UI : MonoBehaviour
     }
     public void Remove_FromUi(int slotID)
     {
-        Collectable itemToDrop = GameManager.m_instance.m_itemManager.GetCollectableByType(m_player.m_inventory.slots[slotID].m_type);
+        Collectable itemToDrop = GameManager.Instance.m_itemManager.GetCollectableByType(m_player.m_inventory.slots[slotID].m_type);
         
         if (itemToDrop != null)
         {

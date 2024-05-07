@@ -12,7 +12,7 @@ public class PlayerController : MonoBehaviour
     private PlayerControll m_Input;
     private Vector2 m_MoveInputValue;
 
-    private Animator m_Animator;
+    public Animator m_Animator;
 
     private void OnEnable()
     {

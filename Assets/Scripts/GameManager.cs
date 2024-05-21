@@ -1,28 +1,13 @@
-using System.Collections;
+﻿using System.Collections;
 using System.Collections.Generic;
 using UnityEngine;
 
-public class GameManager : MonoBehaviour
+public class GameManager : Singleton<GameManager> 
 {
-    public static GameManager m_instance;
+    public PlayerController m_PlayerController;
 
-    public ItemManager m_itemManager;
-
-    private void Awake()
+    private void Start()
     {
-        if(m_instance != null && m_instance != this)
-        {
-            Destroy(m_instance);
-        }
-        else
-        {
-            m_instance = this;
-        }
-        DontDestroyOnLoad(this.gameObject);
-        m_itemManager = GetComponent<ItemManager>();
-    }
-    void Update()
-    {
-        
+       
     }
 }

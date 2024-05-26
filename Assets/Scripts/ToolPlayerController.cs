@@ -1,6 +1,8 @@
+using System;
 using System.Collections;
 using System.Collections.Generic;
 using UnityEngine;
+using UnityEngine.Tilemaps;
 
 public class ToolPlayerController : MonoBehaviour
 {
@@ -8,6 +10,8 @@ public class ToolPlayerController : MonoBehaviour
     private Rigidbody2D rb;
     [SerializeField] float OffsetDistance = 1.0f;
     [SerializeField] float SizeOfInteracableArea = 1.2f;
+    [SerializeField] MarkerManager markerManager;
+    [SerializeField] TileMapManager tileMapManager;
 
     private void Awake()
     {
@@ -17,10 +21,17 @@ public class ToolPlayerController : MonoBehaviour
 
     private void Update()
     {
+        Marker();
         if (Input.GetMouseButtonDown(0))
         {
             UseTool();
         }
+    }
+
+    private void Marker()
+    {
+        Vector3Int gridPositon = tileMapManager.GetGridPosition(Input.mousePosition, true);
+        markerManager.markedCellPosition = gridPositon;
     }
 
     private void UseTool()

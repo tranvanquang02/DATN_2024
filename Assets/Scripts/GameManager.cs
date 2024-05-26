@@ -5,9 +5,7 @@ using UnityEngine;
 public class GameManager : Singleton<GameManager> 
 {
     public PlayerController m_PlayerController;
+    public ItemContainer Inventory;
+    public ItemDragAndDropController DragAndDropController;
 
-    private void Start()
-    {
-       
-    }
 }

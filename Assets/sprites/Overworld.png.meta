@@ -48,7 +48,7 @@ TextureImporter:
   spriteMeshType: 1
   alignment: 0
   spritePivot: {x: 0.5, y: 0.5}
-  spritePixelsToUnits: 32
+  spritePixelsToUnits: 16
   spriteBorder: {x: 0, y: 0, z: 0, w: 0}
   spriteGenerateFallbackPhysicsShape: 1
   alphaUsage: 1
@@ -123,12 +123,33 @@ TextureImporter:
     serializedVersion: 2
     sprites:
     - serializedVersion: 2
-      name: Overworld_0
+      name: Wood
       rect:
         serializedVersion: 2
         x: 48
         y: 480
         width: 47
+        height: 16
+      alignment: 0
+      pivot: {x: 0.5, y: 0.5}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 3cbdeb11b0b776c48bb331321586f5c9
+      internalID: -427418203
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: Grass
+      rect:
+        serializedVersion: 2
+        x: 0
+        y: 560
+        width: 16
         height: 16
       alignment: 0
       pivot: {x: 0, y: 0}
@@ -137,8 +158,29 @@ TextureImporter:
       physicsShape: []
       tessellationDetail: 0
       bones: []
-      spriteID: 3cbdeb11b0b776c48bb331321586f5c9
-      internalID: -427418203
+      spriteID: d15222f54d896134fb4c9b73b1769c7a
+      internalID: -948058139
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: Plowable
+      rect:
+        serializedVersion: 2
+        x: 32
+        y: 48
+        width: 16
+        height: 16
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: dd5c442a206de874fad514e517a55a3c
+      internalID: -1754461855
       vertices: []
       indices: 
       edges: []
@@ -154,7 +196,9 @@ TextureImporter:
     weights: []
     secondaryTextures: []
     nameFileIdTable:
-      Overworld_0: -427418203
+      Grass: -948058139
+      Plowable: -1754461855
+      Wood: -427418203
   mipmapLimitGroupName: 
   pSDRemoveMatte: 0
   userData: 

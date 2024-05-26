@@ -13,7 +13,7 @@ public class HighlightController : MonoBehaviour
             return;
         }
         CurrentTarget = target;
-        Vector3 position = target.transform.position + Vector3.up * 0.5f;
+        Vector3 position = target.transform.position + Vector3.up;
         Highlight(position);
     }
     public void Highlight(Vector3 position)

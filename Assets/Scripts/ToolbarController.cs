@@ -13,7 +13,13 @@ public class ToolbarController : MonoBehaviour
     {
         SelectedTool = id;
     }
-
+    public Item GetItem
+    {
+        get
+        {
+            return GameManager.Instance.Inventory.slots[SelectedTool].item;
+        }
+    }
     private void Update()
     {
         float delta = Input.mouseScrollDelta.y;

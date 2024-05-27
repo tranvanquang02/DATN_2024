@@ -7,5 +7,5 @@ public class GameManager : Singleton<GameManager>
     public PlayerController m_PlayerController;
     public ItemContainer Inventory;
     public ItemDragAndDropController DragAndDropController;
-
+    public DayTimeController DayTimeController;
 }

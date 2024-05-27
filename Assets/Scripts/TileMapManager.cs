@@ -7,25 +7,8 @@ public class TileMapManager : MonoBehaviour
 {
 
     [SerializeField] Tilemap tilemap;
-    [SerializeField] List<TileData> tileDatas;
+    public CropManager cropManager;
 
-    Dictionary<TileBase, TileData> dataFromTiles;
-    private void Start()
-    {
-        dataFromTiles = new Dictionary<TileBase, TileData>();
-
-        foreach (TileData tileData in tileDatas)
-        {
-            foreach (TileBase tile in tileData.Tiles)
-            {
-                dataFromTiles.Add(tile, tileData);
-            }
-        }
-    }
-    private void Update()
-    {
-       
-    }
     public Vector3Int GetGridPosition(Vector2 pos, bool mousePositon = false) 
     {
         Vector3 WorldPosition;
@@ -50,8 +33,5 @@ public class TileMapManager : MonoBehaviour
 
         return tile;
     }
-    public TileData GetTileData(TileBase tile)
-    {
-        return dataFromTiles[tile];
-    }
+ 
 }

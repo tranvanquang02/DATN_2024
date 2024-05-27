@@ -1,4 +1,4 @@
-using System;
+﻿using System;
 using System.Collections;
 using System.Collections.Generic;
 using UnityEngine;
@@ -8,15 +8,16 @@ public class ToolPlayerController : MonoBehaviour
 {
     private PlayerController player;
     private Rigidbody2D rb;
+    private Animator animator;
     private ToolbarController toolbarController;
     [SerializeField] float OffsetDistance = 1.0f;
     [SerializeField] float SizeOfInteracableArea = 1.5f;
     [SerializeField] MarkerManager markerManager;
     [SerializeField] TileMapManager tileMapManager;
-    [SerializeField] float MaxDistance = 1.5f;
-    [SerializeField] CropManager cropManager;
-    [SerializeField] TileData PlowableTiles;
 
+    //[SerializeField] TileData PlowableTiles;
+
+    [SerializeField] float MaxDistance = 1.5f;
     Vector3Int SelectedTilePosition;
     bool Selectable;
     private void Awake()
@@ -24,6 +25,7 @@ public class ToolPlayerController : MonoBehaviour
         player = GetComponent<PlayerController>();
         rb = GetComponent<Rigidbody2D>();
         toolbarController = GetComponent<ToolbarController>();
+        animator = GetComponent<Animator>();
     }
 
     private void Update()
@@ -56,33 +58,36 @@ public class ToolPlayerController : MonoBehaviour
         Selectable = Vector2.Distance(PlayerPosition, CameraPositon) < MaxDistance;
         markerManager.Show(Selectable);
     }
+    //dụng cụ tương tác với cây, đá,.. nhưng không phải tile map
     private bool UseToolworld()
     {
         Vector2 position = rb.position + player.LastMotionVector * OffsetDistance;
         Item item = toolbarController.GetItem;
         if(item == null) { return false; }
         if(item.OnAction == null) { return false; }
-        
+        animator.SetTrigger("act");
         bool complete = item.OnAction.OnApply(position);
+        if (complete == true)
+        {
+            if (item.OnItemUsed != null)
+                item.OnItemUsed.OnItemUsed(item, GameManager.Instance.Inventory);
+        }
         return complete;
     }
-    
+    //dụng cụ tương tác với tile map
     private void UseToolGrid()
     {
         if (Selectable == true)
         {
-            TileBase tileBase = tileMapManager.GetTileBase(SelectedTilePosition);
-            TileData tileData = tileMapManager.GetTileData(tileBase); 
-            if (tileData != PlowableTiles) { return; }
-            if (cropManager.check(SelectedTilePosition))
-            {
-                cropManager.seed(SelectedTilePosition);
+            Item item = toolbarController.GetItem;
+            if (item == null) { return; }
+            if (item.OnTileMapAction == null) { return; }
+
+            bool complete = item.OnTileMapAction.OnApplyOnTileMap(SelectedTilePosition, tileMapManager);
+            if (complete == true) {
+                if(item.OnItemUsed != null)
+                    item.OnItemUsed.OnItemUsed(item, GameManager.Instance.Inventory);
             }
-            else
-            {
-                cropManager.plow(SelectedTilePosition);
-            }
-            
         }
     }
 }

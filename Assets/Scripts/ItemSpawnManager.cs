@@ -11,3 +11,4 @@ public class ItemSpawManager : Singleton<ItemSpawManager>
         go.GetComponent<PickUpItem>().set(item, count);
     }
 }
+    

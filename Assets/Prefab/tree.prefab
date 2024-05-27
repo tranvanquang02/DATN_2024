@@ -12,6 +12,8 @@ GameObject:
   - component: {fileID: 8848532731595985629}
   - component: {fileID: 3955580027076594999}
   - component: {fileID: 7782132745034533911}
+  - component: {fileID: -259245569571659175}
+  - component: {fileID: -5549604242195245305}
   m_Layer: 0
   m_Name: tree
   m_TagString: Untagged
@@ -149,3 +151,31 @@ BoxCollider2D:
   serializedVersion: 2
   m_Size: {x: 1.0727692, y: 0.77706075}
   m_EdgeRadius: 0
+--- !u!114 &-259245569571659175
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 5314677176473748161}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 274c369bf2f9c1a4c8dd964584961672, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+--- !u!114 &-5549604242195245305
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 5314677176473748161}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: a1c1cc37b410ea649a3f0fb050895cd9, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  ItemToSpawn: {fileID: 11400000, guid: f0963cb74f4ead2468303e6efb85bd52, type: 2}
+  Count: 1
+  Spread: 2
+  Probability: 0.5

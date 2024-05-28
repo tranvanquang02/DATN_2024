@@ -9,7 +9,8 @@ public class ToolAction : ScriptableObject
         Debug.LogWarning("On Apply not implment");
         return true;
     }
-    public virtual bool OnApplyOnTileMap(Vector3Int gridPos, TileMapManager tileMapManager)
+    public virtual bool OnApplyOnTileMap(Vector3Int gridPos, 
+        TileMapManager tileMapManager, Item item)
     {
         return true;
     }

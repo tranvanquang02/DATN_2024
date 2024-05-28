@@ -9,7 +9,7 @@ using UnityEngine.UI;
 public class DayTimeController : MonoBehaviour
 {
     const float SecondsInDay = 86400f;
-    const float PhaseLeght = 900f;
+    const float PhaseLeght = 900f; // 15 min 1 Tick
     
     [SerializeField] Color DayLightColor = Color.white;
     [SerializeField] Color NightLightColor;

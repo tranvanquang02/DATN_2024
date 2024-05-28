@@ -83,7 +83,10 @@ public class ToolPlayerController : MonoBehaviour
             if (item == null) { return; }
             if (item.OnTileMapAction == null) { return; }
 
-            bool complete = item.OnTileMapAction.OnApplyOnTileMap(SelectedTilePosition, tileMapManager);
+            bool complete = item.OnTileMapAction.OnApplyOnTileMap(
+                SelectedTilePosition, 
+                tileMapManager, 
+                item);
             if (complete == true) {
                 if(item.OnItemUsed != null)
                     item.OnItemUsed.OnItemUsed(item, GameManager.Instance.Inventory);

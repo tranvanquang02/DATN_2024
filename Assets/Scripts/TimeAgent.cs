@@ -8,8 +8,11 @@ public class TimeAgent : MonoBehaviour
     public Action OnTimeTick;
     private void Start()
     {
+        Init();
+    }
+    public void Init()
+    {
         GameManager.Instance.DayTimeController.Subscrice(this);
-
     }
     public void Invoke()
     {

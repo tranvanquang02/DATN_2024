@@ -17,7 +17,7 @@ public class PlowTile : ToolAction
         {
             return false;
         }
-        tileMapManager.cropManager.plow(gridPos);
+        tileMapManager.cropManager.Plow(gridPos);
 
         return true;
     }

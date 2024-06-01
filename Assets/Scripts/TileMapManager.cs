@@ -6,11 +6,17 @@ using UnityEngine.Tilemaps;
 public class TileMapManager : MonoBehaviour
 {
 
-    [SerializeField] Tilemap tilemap;
+    [SerializeField] Tilemap tileMap;
     public CropManager cropManager;
 
     public Vector3Int GetGridPosition(Vector2 pos, bool mousePositon = false) 
     {
+        if (tileMap == null)
+        {
+            tileMap = GameObject.Find("GroundTileMap").GetComponent<Tilemap>();
+        }
+        if (tileMap == null) { return Vector3Int.zero; }
+
         Vector3 WorldPosition;
         if (mousePositon)
         {
@@ -22,14 +28,19 @@ public class TileMapManager : MonoBehaviour
             WorldPosition = pos;
         }
 
-        Vector3Int gridPositon = tilemap.WorldToCell(WorldPosition);
+        Vector3Int gridPositon = tileMap.WorldToCell(WorldPosition);
 
         return gridPositon;
     }
     public TileBase GetTileBase(Vector3Int gridPositon )
     {
 
-        TileBase tile = tilemap.GetTile(gridPositon);
+        if (tileMap == null)
+        {
+            tileMap = GameObject.Find("GroundTileMap").GetComponent<Tilemap>();
+        }
+        if (tileMap == null) { return null; }
+        TileBase tile = tileMap.GetTile(gridPositon);
 
         return tile;
     }

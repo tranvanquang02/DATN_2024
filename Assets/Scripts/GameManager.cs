@@ -8,4 +8,5 @@ public class GameManager : Singleton<GameManager>
     public ItemContainer Inventory;
     public ItemDragAndDropController DragAndDropController;
     public DayTimeController DayTimeController;
+    public DialogueSystem dialogueSystem;
 }

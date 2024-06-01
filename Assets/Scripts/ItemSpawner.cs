@@ -23,7 +23,7 @@ public class ItemSpawner : MonoBehaviour
             Vector3 position = transform.position;
             position.x += Spread * Random.value - Spread / 2;
             position.y += Spread * Random.value - Spread / 2;
-            ItemSpawManager.Instance.SpawnItem(position, ItemToSpawn, Count);
+            ItemSpawManager.Instance.SpawnItem(this.transform, position, ItemToSpawn, Count);
         }
     }
 }

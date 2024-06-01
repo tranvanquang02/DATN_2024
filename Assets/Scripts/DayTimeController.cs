@@ -32,7 +32,7 @@ public class DayTimeController : MonoBehaviour
     {
         time = StartAtTime;
     }
-    public void Subscrice(TimeAgent TimeAgent)
+    public void SubscriBe(TimeAgent TimeAgent)
     {
         agents.Add(TimeAgent);
     }

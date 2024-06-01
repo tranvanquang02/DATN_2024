@@ -6,13 +6,16 @@ using UnityEngine;
 public class TimeAgent : MonoBehaviour
 {
     public Action OnTimeTick;
+       
+
+    // template method pattern
     private void Start()
     {
         Init();
     }
     public void Init()
     {
-        GameManager.Instance.DayTimeController.Subscrice(this);
+        GameManager.Instance.DayTimeController.SubscriBe(this);
     }
     public void Invoke()
     {
@@ -22,4 +25,5 @@ public class TimeAgent : MonoBehaviour
     {
         GameManager.Instance.DayTimeController.UnSubscribe(this);
     }
+    
 }

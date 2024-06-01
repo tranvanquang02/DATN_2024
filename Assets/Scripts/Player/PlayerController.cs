@@ -14,7 +14,6 @@ public class PlayerController : MonoBehaviour
     public Vector2 LastMotionVector;
 
     private Animator m_Animator;
-
     private void OnEnable()
     {
 

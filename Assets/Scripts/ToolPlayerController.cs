@@ -14,7 +14,7 @@ public class ToolPlayerController : MonoBehaviour
     [SerializeField] float SizeOfInteracableArea = 1.5f;
     [SerializeField] MarkerManager markerManager;
     [SerializeField] TileMapManager tileMapManager;
-
+    [SerializeField] ToolAction onTilePickUp;
     //[SerializeField] TileData PlowableTiles;
 
     [SerializeField] float MaxDistance = 1.5f;
@@ -60,19 +60,27 @@ public class ToolPlayerController : MonoBehaviour
     }
     //dụng cụ tương tác với cây, đá,.. nhưng không phải tile map
     private bool UseToolworld()
-    {
-        Vector2 position = rb.position + player.LastMotionVector * OffsetDistance;
-        Item item = toolbarController.GetItem;
-        if(item == null) { return false; }
-        if(item.OnAction == null) { return false; }
-        animator.SetTrigger("act");
-        bool complete = item.OnAction.OnApply(position);
-        if (complete == true)
+    {        
+        if (Selectable == true)
         {
-            if (item.OnItemUsed != null)
-                item.OnItemUsed.OnItemUsed(item, GameManager.Instance.Inventory);
+
+            Vector2 position = rb.position + player.LastMotionVector * OffsetDistance;
+            Item item = toolbarController.GetItem;
+            if (item == null) { return false; }
+            if (item.OnAction == null) { return false; }
+            animator.SetTrigger("act");
+            bool complete = item.OnAction.OnApply(position);
+            if (complete == true)
+            {
+                if (item.OnItemUsed != null)
+                    item.OnItemUsed.OnItemUsed(item, GameManager.Instance.Inventory);
+            }
+            return complete;
         }
-        return complete;
+        else
+        {
+            return false;
+        }
     }
     //dụng cụ tương tác với tile map
     private void UseToolGrid()
@@ -80,7 +88,9 @@ public class ToolPlayerController : MonoBehaviour
         if (Selectable == true)
         {
             Item item = toolbarController.GetItem;
-            if (item == null) { return; }
+            if (item == null) {
+                PickUpTile();
+                return; }
             if (item.OnTileMapAction == null) { return; }
 
             bool complete = item.OnTileMapAction.OnApplyOnTileMap(
@@ -92,5 +102,12 @@ public class ToolPlayerController : MonoBehaviour
                     item.OnItemUsed.OnItemUsed(item, GameManager.Instance.Inventory);
             }
         }
+    }
+
+    private void PickUpTile()
+    {
+        if(onTilePickUp == null) { return; }
+
+        onTilePickUp.OnApplyOnTileMap(SelectedTilePosition, tileMapManager, null);
     }
 }

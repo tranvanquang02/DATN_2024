@@ -251,9 +251,11 @@ GameObject:
   - component: {fileID: 2959383288461000606}
   - component: {fileID: 2793303424322237278}
   - component: {fileID: 2440805029561878298}
+  - component: {fileID: 7361930237094344871}
+  - component: {fileID: 8361335800524131473}
   m_Layer: 6
   m_Name: Player
-  m_TagString: Untagged
+  m_TagString: Player
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
   m_StaticEditorFlags: 0
@@ -451,7 +453,12 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   OffsetDistance: 1
-  SizeOfInteracableArea: 1.2
+  SizeOfInteracableArea: 0.5
+  markerManager: {fileID: 0}
+  tileMapManager: {fileID: 0}
+  onTilePickUp: {fileID: 11400000, guid: 65750283860f30042a9c4178e41e454b, type: 2}
+  iconHighLight: {fileID: 0}
+  MaxDistance: 1.5
 --- !u!114 &4250526329225417658
 MonoBehaviour:
   m_ObjectHideFlags: 0
@@ -493,6 +500,7 @@ MonoBehaviour:
   m_EditorClassIdentifier: 
   inventoryPanel: {fileID: 0}
   toolbarPanel: {fileID: 0}
+  topPanel: {fileID: 0}
 --- !u!114 &2440805029561878298
 MonoBehaviour:
   m_ObjectHideFlags: 0
@@ -506,6 +514,34 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   ToolbarSize: 12
+  IconHighLight: {fileID: 0}
+--- !u!114 &7361930237094344871
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 6860351848024520587}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: b1cfab3173d0f6747bda231858a75fa7, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  inventory: {fileID: 11400000, guid: b576290f01e34e54b8fc08cd6dca76e0, type: 2}
+--- !u!114 &8361335800524131473
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 6860351848024520587}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: b497f711c4f7b7c4ea2941ec123c72fc, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  itemContainerPanel: {fileID: 0}
+  maxDistance: 2.5
 --- !u!1 &6947267498834957784
 GameObject:
   m_ObjectHideFlags: 0

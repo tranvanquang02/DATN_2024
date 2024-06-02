@@ -1,0 +1,23 @@
+%YAML 1.1
+%TAG !u! tag:unity3d.com,2011:
+--- !u!114 &11400000
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 0}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 46428e2835cde6c47bffb76002319fe0, type: 3}
+  m_Name: Main Scene Placeable obj Contatiner
+  m_EditorClassIdentifier: 
+  placeableObjects:
+  - placedItem: {fileID: 11400000, guid: fecda46abd0ce0645a5ced26d760e973, type: 2}
+    targetObj: {fileID: 0}
+    positionOnGrid: {x: -3, y: -1, z: 0}
+    objectState: '{"itemSlot":{"item":{"instanceID":0},"count":0},"timer":0}'
+  - placedItem: {fileID: 11400000, guid: 738760933d64d7b43a0df93513e8b6ec, type: 2}
+    targetObj: {fileID: 0}
+    positionOnGrid: {x: -1, y: 1, z: 0}
+    objectState: 

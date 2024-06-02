@@ -3,7 +3,7 @@ using System.Collections.Generic;
 using UnityEngine;
 using UnityEngine.Rendering;
 
-public class SoundManager : MonoBehaviour
+public class MusicManager : Singleton<MusicManager>
 {
     [SerializeField] AudioSource audioSource;
     [SerializeField] float timeToSwitch;

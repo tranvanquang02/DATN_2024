@@ -8,7 +8,7 @@ using UnityEngine.UI;
 
 public class ItemDragAndDropController : MonoBehaviour
 {
-    [SerializeField] ItemSlot itemSlot;
+    public ItemSlot itemSlot;
     [SerializeField] GameObject DragItemIcon;
 
     RectTransform IconTransform;
@@ -42,6 +42,15 @@ public class ItemDragAndDropController : MonoBehaviour
             }
         }
     }
+    public bool Check(Item item, int count = 1)
+    {
+        if (itemSlot == null) return false;
+        if (item.Stackable)
+        {
+            return itemSlot.item == item && itemSlot.count >= count;
+        }
+        return itemSlot.item == item;
+    }
     internal void OnClick(ItemSlot itemSlot)
     {
         if(this.itemSlot.item == null)
@@ -51,11 +60,20 @@ public class ItemDragAndDropController : MonoBehaviour
         }
         else
         {
-            Item item = itemSlot.item;
-            int count = itemSlot.count;
+            if(itemSlot.item == this.itemSlot.item)
+            {
+                itemSlot.count += this.itemSlot.count;
+                this.itemSlot.clear();
+            }
+            else
+            {
+                Item item = itemSlot.item;
+                int count = itemSlot.count;
 
-            itemSlot.copy(this.itemSlot);
-            this.itemSlot.set(item, count);
+                itemSlot.copy(this.itemSlot);
+                this.itemSlot.set(item, count);
+            }
+            
         }
         UpdateIcon();
     }
@@ -71,5 +89,23 @@ public class ItemDragAndDropController : MonoBehaviour
             DragItemIcon.SetActive(true);
             itemIconImage.sprite = itemSlot.item.Icon;
         }
+    }
+
+    internal void RemoveItem(int count = 1)
+    {
+        if (itemSlot == null) return;
+        if (itemSlot.item.Stackable)
+        {
+            itemSlot.count -= count;
+            if(itemSlot.count <= 0)
+            {
+                itemSlot.clear();
+            }
+        }
+        else
+        {
+            itemSlot.clear();
+        }
+        UpdateIcon();
     }
 }

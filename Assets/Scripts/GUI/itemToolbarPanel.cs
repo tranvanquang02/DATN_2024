@@ -18,6 +18,7 @@ public class itemToolbarPanel : ItemPanel
     public override void OnClick(int id)
     {
         toolbarController.set(id);
+        ToolbarController.Instance.UpdateHighlightIcon(id);
         HightLight(id);
     }
     public void HightLight(int id)
@@ -26,5 +27,10 @@ public class itemToolbarPanel : ItemPanel
         currentSelectedTool = id;
         Buttons[currentSelectedTool].Hightight(true);
 
+    }
+    public override void Show()
+    {
+        base.Show();
+        toolbarController.UpdateHighlightIcon();
     }
 }

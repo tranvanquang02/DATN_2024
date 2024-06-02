@@ -3,11 +3,12 @@ using System.Collections.Generic;
 using UnityEngine;
 using UnityEngine.Tilemaps;
 
-public class TileMapManager : MonoBehaviour
+public class TileMapReadController : MonoBehaviour
 {
 
     [SerializeField] Tilemap tileMap;
     public CropManager cropManager;
+    public PlaceableObjectReferenceManager placeableObjectManager;
 
     public Vector3Int GetGridPosition(Vector2 pos, bool mousePositon = false) 
     {

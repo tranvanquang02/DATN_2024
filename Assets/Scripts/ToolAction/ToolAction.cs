@@ -10,7 +10,7 @@ public class ToolAction : ScriptableObject
         return true;
     }
     public virtual bool OnApplyOnTileMap(Vector3Int gridPos, 
-        TileMapManager tileMapManager, Item item)
+        TileMapReadController tileMapManager, Item item)
     {
         return true;
     }

@@ -13,9 +13,9 @@ public class ToolPlayerController : MonoBehaviour
     [SerializeField] float OffsetDistance = 1.0f;
     [SerializeField] float SizeOfInteracableArea = 1.5f;
     [SerializeField] MarkerManager markerManager;
-    [SerializeField] TileMapManager tileMapManager;
+    [SerializeField] TileMapReadController tileMapManager;
     [SerializeField] ToolAction onTilePickUp;
-    //[SerializeField] TileData PlowableTiles;
+    [SerializeField] IconHighLight iconHighLight;
 
     [SerializeField] float MaxDistance = 1.5f;
     Vector3Int SelectedTilePosition;
@@ -50,6 +50,7 @@ public class ToolPlayerController : MonoBehaviour
     private void Marker()
     {
         markerManager.markedCellPosition = SelectedTilePosition;
+        iconHighLight.cellPosition = SelectedTilePosition;
     }
     private void CanSelectCheck()
     {
@@ -57,6 +58,7 @@ public class ToolPlayerController : MonoBehaviour
         Vector2 CameraPositon = Camera.main.ScreenToWorldPoint(Input.mousePosition);
         Selectable = Vector2.Distance(PlayerPosition, CameraPositon) < MaxDistance;
         markerManager.Show(Selectable);
+        iconHighLight.CanSelect = Selectable;
     }
     //dụng cụ tương tác với cây, đá,.. nhưng không phải tile map
     private bool UseToolworld()
@@ -73,7 +75,7 @@ public class ToolPlayerController : MonoBehaviour
             if (complete == true)
             {
                 if (item.OnItemUsed != null)
-                    item.OnItemUsed.OnItemUsed(item, GameManager.Instance.Inventory);
+                    item.OnItemUsed.OnItemUsed(item, GameManager.Instance.inventoryContainer);
             }
             return complete;
         }
@@ -99,7 +101,7 @@ public class ToolPlayerController : MonoBehaviour
                 item);
             if (complete == true) {
                 if(item.OnItemUsed != null)
-                    item.OnItemUsed.OnItemUsed(item, GameManager.Instance.Inventory);
+                    item.OnItemUsed.OnItemUsed(item, GameManager.Instance.inventoryContainer);
             }
         }
     }

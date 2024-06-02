@@ -45,9 +45,9 @@ public class PickUpItem : MonoBehaviour
 
         if (DistanceToPlayer < 0.1f)
         {
-            if(GameManager.Instance.Inventory != null)
+            if(GameManager.Instance.inventoryContainer != null)
             {
-                GameManager.Instance.Inventory.Add(item,Count);
+                GameManager.Instance.inventoryContainer.Add(item,Count);
             }
             else
             {

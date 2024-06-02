@@ -4,7 +4,7 @@ using UnityEngine;
 
 public class ItemPanel : MonoBehaviour
 {
-    public ItemContainer Inventory;
+    public ItemContainer itemContainer;
     public List<InventoryButton> Buttons;
 
     private void OnEnable()
@@ -20,6 +20,14 @@ public class ItemPanel : MonoBehaviour
         SetIndex();
         Show();
     }
+    private void LateUpdate()
+    {
+        if (itemContainer.isDirty)
+        {
+            Show();
+            itemContainer.isDirty = false;
+        }
+    }
     private void SetIndex()
     {
         for (int i = 0;  i < Buttons.Count; i++)
@@ -30,15 +38,15 @@ public class ItemPanel : MonoBehaviour
 
     public virtual void Show()
     {
-        for (int i = 0; i < Inventory.slots.Count && i < Buttons.Count; i++)
+        for (int i = 0; i < itemContainer.slots.Count && i < Buttons.Count; i++)
         {
-            if (Inventory.slots[i].item == null)
+            if (itemContainer.slots[i].item == null)
             {
                 Buttons[i].clean();
             }
             else
             {
-                Buttons[i].Set(Inventory.slots[i]);
+                Buttons[i].Set(itemContainer.slots[i]);
             }
         }
     }

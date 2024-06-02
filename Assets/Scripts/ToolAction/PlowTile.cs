@@ -7,9 +7,9 @@ using UnityEngine.Tilemaps;
 public class PlowTile : ToolAction
 {
     [SerializeField] List<TileBase> canPlow ;
-
+    [SerializeField] AudioClip onPlowUsed;
     public override bool OnApplyOnTileMap(Vector3Int gridPos,
-        TileMapManager tileMapManager, Item item)
+        TileMapReadController tileMapManager, Item item)
     {
         TileBase tileToPlow = tileMapManager.GetTileBase(gridPos);
 
@@ -18,7 +18,7 @@ public class PlowTile : ToolAction
             return false;
         }
         tileMapManager.cropManager.Plow(gridPos);
-
+        AudioManager.Instance.Play(onPlowUsed);
         return true;
     }
 }

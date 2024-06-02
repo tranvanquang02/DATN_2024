@@ -13,33 +13,9 @@ MonoBehaviour:
   m_Name: MainSenceCropContainer
   m_EditorClassIdentifier: 
   crops:
-  - GrowTimer: 20
-    crop: {fileID: 11400000, guid: a8e841ef091af3544b310932ca61b9fd, type: 2}
-    GrowStage: 4
+  - GrowTimer: 0
+    crop: {fileID: 0}
+    GrowStage: 0
     spriteRenderer: {fileID: 0}
-    damage: 0.59999996
+    damage: 0
     position: {x: 0, y: -3, z: 0}
-  - GrowTimer: 20
-    crop: {fileID: 11400000, guid: a8e841ef091af3544b310932ca61b9fd, type: 2}
-    GrowStage: 4
-    spriteRenderer: {fileID: 0}
-    damage: 0.6799999
-    position: {x: -1, y: -3, z: 0}
-  - GrowTimer: 20
-    crop: {fileID: 11400000, guid: a8e841ef091af3544b310932ca61b9fd, type: 2}
-    GrowStage: 4
-    spriteRenderer: {fileID: 0}
-    damage: 0.56
-    position: {x: 1, y: -3, z: 0}
-  - GrowTimer: 18
-    crop: {fileID: 11400000, guid: a8e841ef091af3544b310932ca61b9fd, type: 2}
-    GrowStage: 3
-    spriteRenderer: {fileID: 0}
-    damage: 0.36
-    position: {x: -2, y: -3, z: 0}
-  - GrowTimer: 16
-    crop: {fileID: 11400000, guid: a8e841ef091af3544b310932ca61b9fd, type: 2}
-    GrowStage: 3
-    spriteRenderer: {fileID: 0}
-    damage: 0.32
-    position: {x: -3, y: -3, z: 0}

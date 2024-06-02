@@ -14,3 +14,4 @@ MonoBehaviour:
   m_EditorClassIdentifier: 
   recipes:
   - {fileID: 11400000, guid: ca4c1fc7edd05bf41aea848c84ef2fcf, type: 2}
+  - {fileID: 11400000, guid: 6d9e8ee7a04d7c444a67d6203b87113c, type: 2}

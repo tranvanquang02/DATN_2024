@@ -6,7 +6,7 @@ using UnityEngine;
 public class SeedTile : ToolAction
 {
     public override bool OnApplyOnTileMap(Vector3Int gridPos, 
-        TileMapManager tileMapManager,Item item)
+        TileMapReadController tileMapManager,Item item)
     {
         if(tileMapManager.cropManager.Check(gridPos) == false) return false;
 

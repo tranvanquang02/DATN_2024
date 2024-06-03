@@ -11547,7 +11547,7 @@ TextureImporter:
       edges: []
       weights: []
     - serializedVersion: 2
-      name: terrain_atlas_544
+      name: GrassTopL
       rect:
         serializedVersion: 2
         x: 160
@@ -11568,7 +11568,7 @@ TextureImporter:
       edges: []
       weights: []
     - serializedVersion: 2
-      name: terrain_atlas_545
+      name: GrassTop
       rect:
         serializedVersion: 2
         x: 192
@@ -11589,7 +11589,7 @@ TextureImporter:
       edges: []
       weights: []
     - serializedVersion: 2
-      name: terrain_atlas_546
+      name: GrassTopR
       rect:
         serializedVersion: 2
         x: 224
@@ -12198,7 +12198,7 @@ TextureImporter:
       edges: []
       weights: []
     - serializedVersion: 2
-      name: terrain_atlas_575
+      name: GrassLeft
       rect:
         serializedVersion: 2
         x: 160
@@ -12219,7 +12219,7 @@ TextureImporter:
       edges: []
       weights: []
     - serializedVersion: 2
-      name: terrain_atlas_576
+      name: plowable2
       rect:
         serializedVersion: 2
         x: 192
@@ -12240,7 +12240,7 @@ TextureImporter:
       edges: []
       weights: []
     - serializedVersion: 2
-      name: terrain_atlas_577
+      name: GrassRight
       rect:
         serializedVersion: 2
         x: 224
@@ -12390,7 +12390,7 @@ TextureImporter:
       name: terrain_atlas_584
       rect:
         serializedVersion: 2
-        x: 448
+        x: 449
         y: 416
         width: 32
         height: 32
@@ -12807,10 +12807,10 @@ TextureImporter:
       edges: []
       weights: []
     - serializedVersion: 2
-      name: terrain_atlas_604
+      name: GrassBotL
       rect:
         serializedVersion: 2
-        x: 160
+        x: 161
         y: 384
         width: 32
         height: 32
@@ -12828,7 +12828,7 @@ TextureImporter:
       edges: []
       weights: []
     - serializedVersion: 2
-      name: terrain_atlas_605
+      name: GrassBot
       rect:
         serializedVersion: 2
         x: 192
@@ -12849,7 +12849,7 @@ TextureImporter:
       edges: []
       weights: []
     - serializedVersion: 2
-      name: terrain_atlas_606
+      name: GrassBotR
       rect:
         serializedVersion: 2
         x: 224
@@ -20787,7 +20787,7 @@ TextureImporter:
       edges: []
       weights: []
     - serializedVersion: 2
-      name: terrain_atlas_984
+      name: land
       rect:
         serializedVersion: 2
         x: 128
@@ -21385,7 +21385,17 @@ TextureImporter:
     weights: []
     secondaryTextures: []
     nameFileIdTable:
+      GrassBot: -1648256107
+      GrassBotL: -1120702666
+      GrassBotR: 386549319
+      GrassLeft: -1505477599
+      GrassRight: 690547577
+      GrassTop: -2122568110
+      GrassTopL: 517492362
+      GrassTopR: -248738141
       PlowedTile: 1614785584
+      land: -684312664
+      plowable2: 1374709068
       terrain_atlas_0: 1435071136
       terrain_atlas_1: 351846827
       terrain_atlas_10: 1142157276
@@ -21893,9 +21903,6 @@ TextureImporter:
       terrain_atlas_541: -1067221011
       terrain_atlas_542: -431544220
       terrain_atlas_543: 1401646010
-      terrain_atlas_544: 517492362
-      terrain_atlas_545: -2122568110
-      terrain_atlas_546: -248738141
       terrain_atlas_547: -150377861
       terrain_atlas_548: 474948740
       terrain_atlas_549: -1294659750
@@ -21927,9 +21934,6 @@ TextureImporter:
       terrain_atlas_572: -783700651
       terrain_atlas_573: -1285056403
       terrain_atlas_574: 803274665
-      terrain_atlas_575: -1505477599
-      terrain_atlas_576: 1374709068
-      terrain_atlas_577: 690547577
       terrain_atlas_578: -153789027
       terrain_atlas_579: 1111312121
       terrain_atlas_58: -951120842
@@ -21960,9 +21964,6 @@ TextureImporter:
       terrain_atlas_601: 1562447840
       terrain_atlas_602: 1173768335
       terrain_atlas_603: 2054122993
-      terrain_atlas_604: -1120702666
-      terrain_atlas_605: -1648256107
-      terrain_atlas_606: 386549319
       terrain_atlas_607: -686258187
       terrain_atlas_608: -283039141
       terrain_atlas_609: 1130995116
@@ -22380,7 +22381,6 @@ TextureImporter:
       terrain_atlas_980: -1862196396
       terrain_atlas_981: 1447036269
       terrain_atlas_982: 897303717
-      terrain_atlas_984: -684312664
       terrain_atlas_985: 1850950924
       terrain_atlas_986: -171099928
       terrain_atlas_987: -684109800

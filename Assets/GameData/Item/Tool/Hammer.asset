@@ -10,14 +10,15 @@ MonoBehaviour:
   m_Enabled: 1
   m_EditorHideFlags: 0
   m_Script: {fileID: 11500000, guid: 99f5b50a49181d14b81a40d6081d8b0b, type: 3}
-  m_Name: Smelter
+  m_Name: Hammer
   m_EditorClassIdentifier: 
-  Name: 
-  Icon: {fileID: 21300000, guid: cbfb11026e312e24c83e9106a1965ee2, type: 3}
+  id: 4
+  Name: Hammer
+  Icon: {fileID: 21300000, guid: 981dedbf56222d84c95a4e353d8e5341, type: 3}
   Stackable: 0
-  OnAction: {fileID: 0}
-  OnTileMapAction: {fileID: 11400000, guid: a12ce2753a6895c4e86869fad45260e7, type: 2}
-  OnItemUsed: {fileID: 11400000, guid: a12ce2753a6895c4e86869fad45260e7, type: 2}
+  OnAction: {fileID: 11400000, guid: 2abaa442bc2d9be4eacf921b28273e0d, type: 2}
+  OnTileMapAction: {fileID: 0}
+  OnItemUsed: {fileID: 0}
   crop: {fileID: 0}
   iconHightlight: 1
-  itemPrefab: {fileID: 4977772612648684898, guid: 0c4bc6a596894d143ba447635ab07ed1, type: 3}
+  itemPrefab: {fileID: 0}

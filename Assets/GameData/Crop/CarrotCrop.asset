@@ -10,14 +10,14 @@ MonoBehaviour:
   m_Enabled: 1
   m_EditorHideFlags: 0
   m_Script: {fileID: 11500000, guid: 0045afddb1ce7d34797a3346d5efb964, type: 3}
-  m_Name: Carrot
+  m_Name: CarrotCrop
   m_EditorClassIdentifier: 
   TimeToGrow: 20
-  yield: {fileID: 11400000, guid: f0963cb74f4ead2468303e6efb85bd52, type: 2}
+  yield: {fileID: 11400000, guid: b105e68d205d9d0469fffdbb3e4e483f, type: 2}
   count: 5
   sprites:
-  - {fileID: -1621858966, guid: 89674c4d54c5b70499fb77eae067fd9d, type: 3}
-  - {fileID: 302620341, guid: 89674c4d54c5b70499fb77eae067fd9d, type: 3}
-  - {fileID: -411297537, guid: 89674c4d54c5b70499fb77eae067fd9d, type: 3}
-  - {fileID: 2108002245, guid: 89674c4d54c5b70499fb77eae067fd9d, type: 3}
+  - {fileID: -1149188054, guid: 89674c4d54c5b70499fb77eae067fd9d, type: 3}
+  - {fileID: 1480705501, guid: 89674c4d54c5b70499fb77eae067fd9d, type: 3}
+  - {fileID: -2039986136, guid: 89674c4d54c5b70499fb77eae067fd9d, type: 3}
+  - {fileID: 151432277, guid: 89674c4d54c5b70499fb77eae067fd9d, type: 3}
   GrowStageTime: 04000000070000000d00000014000000

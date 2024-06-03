@@ -10,12 +10,15 @@ MonoBehaviour:
   m_Enabled: 1
   m_EditorHideFlags: 0
   m_Script: {fileID: 11500000, guid: 99f5b50a49181d14b81a40d6081d8b0b, type: 3}
-  m_Name: CarrotSeed
+  m_Name: TomatoSeed
   m_EditorClassIdentifier: 
-  Name: Seeds
-  Icon: {fileID: 21300000, guid: 7310b60c5bd5d214c82ad1945f295e94, type: 3}
+  id: 2
+  Name: CarrotSeed
+  Icon: {fileID: 21300000, guid: 799cf3767890c7745a2e7fdf12509b2b, type: 3}
   Stackable: 1
   OnAction: {fileID: 0}
   OnTileMapAction: {fileID: 11400000, guid: 859638c57b878204dbf37b050d76760d, type: 2}
   OnItemUsed: {fileID: 11400000, guid: 859638c57b878204dbf37b050d76760d, type: 2}
   crop: {fileID: 11400000, guid: a8e841ef091af3544b310932ca61b9fd, type: 2}
+  iconHightlight: 0
+  itemPrefab: {fileID: 0}

@@ -9,5 +9,5 @@ public class GameManager : Singleton<GameManager>
     public ItemDragAndDropController DragAndDropController;
     public DayTimeController DayTimeController;
     public DialogueSystem dialogueSystem;
-    public PlaceableObjectReferenceManager PlaceableObjectReferenceManager;
+    public ItemList itemDB;
 }

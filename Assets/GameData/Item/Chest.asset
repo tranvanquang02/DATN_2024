@@ -12,6 +12,7 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 99f5b50a49181d14b81a40d6081d8b0b, type: 3}
   m_Name: Chest
   m_EditorClassIdentifier: 
+  id: 3
   Name: Chest
   Icon: {fileID: 1397118737, guid: 36588392409dbef45b9aa99420c86d8b, type: 3}
   Stackable: 0

@@ -10,14 +10,15 @@ MonoBehaviour:
   m_Enabled: 1
   m_EditorHideFlags: 0
   m_Script: {fileID: 11500000, guid: 99f5b50a49181d14b81a40d6081d8b0b, type: 3}
-  m_Name: Axe
+  m_Name: Carrot
   m_EditorClassIdentifier: 
-  Name: Axe
-  Icon: {fileID: 21300000, guid: f98f768f95d7d494a869bcef0f52bdd6, type: 3}
-  Stackable: 0
-  OnAction: {fileID: 11400000, guid: 792737710435e554d85fc1672d70149e, type: 2}
+  id: 0
+  Name: 
+  Icon: {fileID: 21300000, guid: 799cf3767890c7745a2e7fdf12509b2b, type: 3}
+  Stackable: 1
+  OnAction: {fileID: 0}
   OnTileMapAction: {fileID: 0}
   OnItemUsed: {fileID: 0}
   crop: {fileID: 0}
-  iconHightlight: 1
-  itemPrefab: {fileID: 2024027359953215471, guid: 3ff2131a202d7fd4e912518cfcdd50ad, type: 3}
+  iconHightlight: 0
+  itemPrefab: {fileID: 0}

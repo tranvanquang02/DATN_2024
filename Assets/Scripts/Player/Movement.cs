@@ -12,10 +12,10 @@ public class Movement : MonoBehaviour
     {
         m_rb = GetComponent<Rigidbody2D>();
     }
-    private void FixedUpdate()
+    /*private void FixedUpdate()
     {
         Move(m_direction);
-    }
+    }*/
     public void Move(Vector2 direction)
     {
         // Áp dụng vận tốc cho rigidbody

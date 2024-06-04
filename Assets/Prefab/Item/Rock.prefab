@@ -12,6 +12,8 @@ GameObject:
   - component: {fileID: 4984695109657802284}
   - component: {fileID: 6368961356766279851}
   - component: {fileID: 3602856706835038190}
+  - component: {fileID: 2417734849099278904}
+  - component: {fileID: -4444173410653096553}
   m_Layer: 0
   m_Name: Rock
   m_TagString: Untagged
@@ -32,7 +34,7 @@ Transform:
   m_ConstrainProportionsScale: 0
   m_Children: []
   m_Father: {fileID: 0}
-  m_RootOrder: 0
+  m_RootOrder: 4
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
 --- !u!212 &4984695109657802284
 SpriteRenderer:
@@ -118,7 +120,7 @@ BoxCollider2D:
   m_IsTrigger: 0
   m_UsedByEffector: 0
   m_UsedByComposite: 0
-  m_Offset: {x: -0.012624681, y: 0.00022698939}
+  m_Offset: {x: -0.06973846, y: -0.20651345}
   m_SpriteTilingProperty:
     border: {x: 0, y: 0, z: 0, w: 0}
     pivot: {x: 0.5, y: 0.5}
@@ -129,7 +131,7 @@ BoxCollider2D:
     adaptiveTiling: 0
   m_AutoTiling: 0
   serializedVersion: 2
-  m_Size: {x: 0.8628019, y: 0.8340235}
+  m_Size: {x: 0.5201198, y: 0.37401018}
   m_EdgeRadius: 0
 --- !u!114 &3602856706835038190
 MonoBehaviour:
@@ -149,3 +151,29 @@ MonoBehaviour:
   item: {fileID: 11400000, guid: 157d711aa9e6124408f77e70a9d01875, type: 2}
   DropCount: 5
   nodeType: 2
+--- !u!114 &2417734849099278904
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 2024027359953215471}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: e5044551c39c51446aeb3d6e66876152, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  stationary: 1
+--- !u!114 &-4444173410653096553
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 2024027359953215471}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: e5044551c39c51446aeb3d6e66876152, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  stationary: 1

@@ -2444,7 +2444,7 @@ MonoBehaviour:
   m_Follow: {fileID: 1570454608}
   m_Lens:
     FieldOfView: 40
-    OrthographicSize: 7
+    OrthographicSize: 10
     NearClipPlane: 0.1
     FarClipPlane: 5000
     Dutch: 0
@@ -2469,7 +2469,7 @@ Transform:
   m_PrefabAsset: {fileID: 0}
   m_GameObject: {fileID: 310547966}
   m_LocalRotation: {x: 0, y: 0, z: 0, w: 1}
-  m_LocalPosition: {x: -1.33, y: 0.85, z: -10}
+  m_LocalPosition: {x: -4.79, y: 1.9, z: -10}
   m_LocalScale: {x: 1, y: 1, z: 1}
   m_ConstrainProportionsScale: 0
   m_Children:
@@ -4117,7 +4117,7 @@ RectTransform:
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
   m_AnchorMin: {x: 0, y: 1}
   m_AnchorMax: {x: 0, y: 1}
-  m_AnchoredPosition: {x: 350, y: -100}
+  m_AnchoredPosition: {x: 360, y: -120}
   m_SizeDelta: {x: 700, y: 200}
   m_Pivot: {x: 0.5, y: 0.5}
 --- !u!114 &479039921
@@ -4446,7 +4446,7 @@ Camera:
   far clip plane: 5000
   field of view: 40
   orthographic: 1
-  orthographic size: 7
+  orthographic size: 10
   m_Depth: -1
   m_CullingMask:
     serializedVersion: 2
@@ -4470,7 +4470,7 @@ Transform:
   m_PrefabAsset: {fileID: 0}
   m_GameObject: {fileID: 519420028}
   m_LocalRotation: {x: 0, y: 0, z: 0, w: 1}
-  m_LocalPosition: {x: -1.33, y: 0.85, z: -10}
+  m_LocalPosition: {x: -4.79, y: 1.9, z: -10}
   m_LocalScale: {x: 1, y: 1, z: 1}
   m_ConstrainProportionsScale: 0
   m_Children:
@@ -5349,29 +5349,9 @@ PrefabInstance:
       value: 
       objectReference: {fileID: 895603435}
     - target: {fileID: 2959383288461000606, guid: 1252131adb051b24d938241a133de752, type: 3}
-      propertyPath: hp.maxVal
-      value: 200
-      objectReference: {fileID: 0}
-    - target: {fileID: 2959383288461000606, guid: 1252131adb051b24d938241a133de752, type: 3}
-      propertyPath: hp.currVal
-      value: 100
-      objectReference: {fileID: 0}
-    - target: {fileID: 2959383288461000606, guid: 1252131adb051b24d938241a133de752, type: 3}
       propertyPath: staminaBar
       value: 
       objectReference: {fileID: 488480639}
-    - target: {fileID: 2959383288461000606, guid: 1252131adb051b24d938241a133de752, type: 3}
-      propertyPath: stamina.maxVal
-      value: 200
-      objectReference: {fileID: 0}
-    - target: {fileID: 2959383288461000606, guid: 1252131adb051b24d938241a133de752, type: 3}
-      propertyPath: stamina.currVal
-      value: 50
-      objectReference: {fileID: 0}
-    - target: {fileID: 2977780849971319533, guid: 1252131adb051b24d938241a133de752, type: 3}
-      propertyPath: onTilePickUp
-      value: 
-      objectReference: {fileID: 11400000, guid: 65750283860f30042a9c4178e41e454b, type: 2}
     - target: {fileID: 2977780849971319533, guid: 1252131adb051b24d938241a133de752, type: 3}
       propertyPath: iconHighLight
       value: 
@@ -5384,10 +5364,6 @@ PrefabInstance:
       propertyPath: tileMapManager
       value: 
       objectReference: {fileID: 1408721644}
-    - target: {fileID: 2977780849971319533, guid: 1252131adb051b24d938241a133de752, type: 3}
-      propertyPath: SizeOfInteracableArea
-      value: 0.5
-      objectReference: {fileID: 0}
     - target: {fileID: 4250526329225417658, guid: 1252131adb051b24d938241a133de752, type: 3}
       propertyPath: HighlightController
       value: 
@@ -5398,11 +5374,11 @@ PrefabInstance:
       objectReference: {fileID: 0}
     - target: {fileID: 4686473781327846899, guid: 1252131adb051b24d938241a133de752, type: 3}
       propertyPath: m_LocalPosition.x
-      value: -1.33
+      value: -4.79
       objectReference: {fileID: 0}
     - target: {fileID: 4686473781327846899, guid: 1252131adb051b24d938241a133de752, type: 3}
       propertyPath: m_LocalPosition.y
-      value: 0.85
+      value: 1.9
       objectReference: {fileID: 0}
     - target: {fileID: 4686473781327846899, guid: 1252131adb051b24d938241a133de752, type: 3}
       propertyPath: m_LocalPosition.z
@@ -5438,10 +5414,6 @@ PrefabInstance:
       objectReference: {fileID: 0}
     - target: {fileID: 6860351848024520587, guid: 1252131adb051b24d938241a133de752, type: 3}
       propertyPath: m_Name
-      value: Player
-      objectReference: {fileID: 0}
-    - target: {fileID: 6860351848024520587, guid: 1252131adb051b24d938241a133de752, type: 3}
-      propertyPath: m_TagString
       value: Player
       objectReference: {fileID: 0}
     - target: {fileID: 8361335800524131473, guid: 1252131adb051b24d938241a133de752, type: 3}
@@ -16521,7 +16493,7 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   targetTilemap: {fileID: 1952270773}
-  tile: {fileID: 11400000, guid: bccd48ee5ff9a384e896090a5822089e, type: 2}
+  tile: {fileID: 11400000, guid: aca27b53c0420a04fb7f0f97e693355d, type: 2}
   markedCellPosition: {x: 0, y: 0, z: 0}
 --- !u!483693784 &1952270772
 TilemapRenderer:

@@ -13,6 +13,6 @@ MonoBehaviour:
   m_Name: PlowDirtAction
   m_EditorClassIdentifier: 
   canPlow:
-  - {fileID: 11400000, guid: b7035ff3a7daa2044a21723b073da3f0, type: 2}
-  - {fileID: 11400000, guid: fb367c574d7c613409ced13bc09aca98, type: 2}
+  - {fileID: 11400000, guid: fd6627144a968914d9d02b8829afe5ea, type: 2}
+  - {fileID: 11400000, guid: b0b6d2d893ca49341ac983c36a044abe, type: 2}
   onPlowUsed: {fileID: 0}

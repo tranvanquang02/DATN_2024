@@ -8,7 +8,7 @@ public class InventoryController : MonoBehaviour
     [SerializeField] GameObject toolbarPanel;
     [SerializeField] GameObject topPanel;
     [SerializeField] GameObject adddtionalPanel;
-
+    [SerializeField] GameObject storePanel;
     private void Update()
     {
         if (Input.GetKeyDown(KeyCode.I))
@@ -28,7 +28,7 @@ public class InventoryController : MonoBehaviour
         inventoryPanel.SetActive(true);
         toolbarPanel.SetActive(false);
         topPanel.SetActive(true);
-
+        storePanel.SetActive(false);
     }
     public void Close()
     {
@@ -36,5 +36,6 @@ public class InventoryController : MonoBehaviour
         toolbarPanel.SetActive(true);
         topPanel.SetActive(false);
         adddtionalPanel.SetActive(false);
+        storePanel.SetActive(false);
     }
 }

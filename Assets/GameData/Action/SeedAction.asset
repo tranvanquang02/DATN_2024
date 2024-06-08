@@ -12,3 +12,4 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 0d897f977b885154d84d7da52e98a781, type: 3}
   m_Name: SeedAction
   m_EditorClassIdentifier: 
+  enegyCost: 3

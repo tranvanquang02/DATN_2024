@@ -6,7 +6,8 @@ using UnityEngine.Tilemaps;
 
 public class ToolPlayerController : MonoBehaviour
 {
-    private PlayerController player;
+    private PlayerController playerController;
+    private Player player;
     private Rigidbody2D rb;
     private Animator animator;
     private ToolbarController toolbarController;
@@ -18,18 +19,27 @@ public class ToolPlayerController : MonoBehaviour
     [SerializeField] IconHighLight iconHighLight;
 
     [SerializeField] float MaxDistance = 1.5f;
+    [SerializeField] int weaponEnegyCost = 1;
+    AttackController attackController;
     Vector3Int SelectedTilePosition;
     bool Selectable;
     private void Awake()
     {
-        player = GetComponent<PlayerController>();
+        playerController = GetComponent<PlayerController>();
         rb = GetComponent<Rigidbody2D>();
         toolbarController = GetComponent<ToolbarController>();
         animator = GetComponent<Animator>();
+        attackController = GetComponent<AttackController>();
+        player = GetComponent<Player>();
     }
 
     private void Update()
     {
+        if(Input.GetMouseButtonDown(0))
+        {
+            WeaponAction();
+            //return;
+        }
         SelectedTile();
         CanSelectCheck();
         Marker();
@@ -43,6 +53,26 @@ public class ToolPlayerController : MonoBehaviour
             UseToolGrid();
         }
     }
+
+    private void WeaponAction()
+    {
+        Item item = toolbarController.GetItem;
+        if (item == null) { return; }
+        if(item.isWeapon == false) { return; }
+
+
+        EnegyCost(weaponEnegyCost);
+
+        Vector2 position = rb.position + playerController.LastMotionVector * OffsetDistance;
+
+        attackController.Attack(item.damage, playerController.LastMotionVector);
+    }
+
+    private void EnegyCost(int enegyCost)
+    {
+        player.GetTired(enegyCost);
+    }
+
     private void SelectedTile()
     {
         SelectedTilePosition = tileMapManager.GetGridPosition(Input.mousePosition, true);
@@ -66,10 +96,13 @@ public class ToolPlayerController : MonoBehaviour
         if (Selectable == true)
         {
 
-            Vector2 position = rb.position + player.LastMotionVector * OffsetDistance;
+            Vector2 position = rb.position + playerController.LastMotionVector * OffsetDistance;
             Item item = toolbarController.GetItem;
             if (item == null) { return false; }
             if (item.OnAction == null) { return false; }
+
+            EnegyCost(item.OnAction.enegyCost);
+
             animator.SetTrigger("act");
             bool complete = item.OnAction.OnApply(position);
             if (complete == true)
@@ -94,6 +127,8 @@ public class ToolPlayerController : MonoBehaviour
                 PickUpTile();
                 return; }
             if (item.OnTileMapAction == null) { return; }
+
+            EnegyCost(item.OnTileMapAction.enegyCost);
 
             bool complete = item.OnTileMapAction.OnApplyOnTileMap(
                 SelectedTilePosition, 

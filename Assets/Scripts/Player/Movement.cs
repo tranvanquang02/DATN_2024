@@ -4,9 +4,9 @@ using UnityEngine;
 
 public class Movement : MonoBehaviour
 {
-    [SerializeField]public float speed = 5f; // Tốc độ di chuyển
+   
 
-    private Rigidbody2D m_rb;
+    public Rigidbody2D m_rb;
     private Vector2 m_direction;
     private void Awake()
     {
@@ -16,10 +16,10 @@ public class Movement : MonoBehaviour
     {
         Move(m_direction);
     }*/
-    public void Move(Vector2 direction)
+    public void Move(Vector2 direction, float speed)
     {
-        // Áp dụng vận tốc cho rigidbody
-        m_rb.MovePosition(m_rb.position + direction * (speed * Time.deltaTime));
+        //_rb.velocity = direction ;
+            m_rb.MovePosition(m_rb.position + direction * speed * Time.deltaTime);
     }
     public void MoveTo(Vector2 direction)
     {

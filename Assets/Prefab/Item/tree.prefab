@@ -14,8 +14,7 @@ GameObject:
   - component: {fileID: 7782132745034533911}
   - component: {fileID: -259245569571659175}
   - component: {fileID: -5549604242195245305}
-  - component: {fileID: 5390128144318399617}
-  - component: {fileID: 9214370756300360231}
+  - component: {fileID: 5575360699254232635}
   m_Layer: 0
   m_Name: tree
   m_TagString: Untagged
@@ -36,7 +35,7 @@ Transform:
   m_ConstrainProportionsScale: 0
   m_Children: []
   m_Father: {fileID: 0}
-  m_RootOrder: 3
+  m_RootOrder: 4
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
 --- !u!212 &8848532731595985629
 SpriteRenderer:
@@ -89,7 +88,7 @@ SpriteRenderer:
   m_SpriteTileMode: 0
   m_WasSpriteAssigned: 1
   m_MaskInteraction: 0
-  m_SpriteSortPoint: 1
+  m_SpriteSortPoint: 0
 --- !u!114 &3955580027076594999
 MonoBehaviour:
   m_ObjectHideFlags: 0
@@ -103,10 +102,10 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   DropItem: {fileID: 1673174401112413034, guid: fcebc0b7c4f519748a75829385603d90, type: 3}
-  Spread: 5
+  Spread: 3
   itemCountInOneDrop: 1
   item: {fileID: 11400000, guid: c6b3c2b50e925b84eb8da4bce4246d6a, type: 2}
-  DropCount: 20
+  DropCount: 5
   nodeType: 1
 --- !u!61 &7782132745034533911
 BoxCollider2D:
@@ -181,20 +180,7 @@ MonoBehaviour:
   Count: 1
   Spread: 2
   Probability: 0.05
---- !u!114 &5390128144318399617
-MonoBehaviour:
-  m_ObjectHideFlags: 0
-  m_CorrespondingSourceObject: {fileID: 0}
-  m_PrefabInstance: {fileID: 0}
-  m_PrefabAsset: {fileID: 0}
-  m_GameObject: {fileID: 5314677176473748161}
-  m_Enabled: 1
-  m_EditorHideFlags: 0
-  m_Script: {fileID: 11500000, guid: e5044551c39c51446aeb3d6e66876152, type: 3}
-  m_Name: 
-  m_EditorClassIdentifier: 
-  stationary: 1
---- !u!114 &9214370756300360231
+--- !u!114 &5575360699254232635
 MonoBehaviour:
   m_ObjectHideFlags: 0
   m_CorrespondingSourceObject: {fileID: 0}

@@ -46,7 +46,7 @@ public class TileMapCropManager : TimeAgent
         foreach (CropTile cropTile in container.crops)
         {
             if (cropTile.crop == null) continue;
-            cropTile.damage += 0.002f;
+            cropTile.damage += 0.02f;
 
             if (cropTile.damage > 1f)
             {

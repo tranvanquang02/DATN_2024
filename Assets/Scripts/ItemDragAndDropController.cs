@@ -78,7 +78,7 @@ public class ItemDragAndDropController : MonoBehaviour
         UpdateIcon();
     }
 
-    private void UpdateIcon()
+    public void UpdateIcon()
     {
         if(itemSlot.item == null)
         {
@@ -107,5 +107,12 @@ public class ItemDragAndDropController : MonoBehaviour
             itemSlot.clear();
         }
         UpdateIcon();
+    }
+
+    internal bool CheckForSale()
+    {
+        if (itemSlot == null) return false;
+        if(itemSlot.item.canSold == false) { return false; }
+        return true;
     }
 }

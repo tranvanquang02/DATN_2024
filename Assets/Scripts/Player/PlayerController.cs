@@ -1,6 +1,7 @@
 using System;
 using System.Collections;
 using System.Collections.Generic;
+using Unity.VisualScripting;
 using UnityEngine;
 using UnityEngine.InputSystem;
 
@@ -14,23 +15,39 @@ public class PlayerController : MonoBehaviour
     public Vector2 LastMotionVector;
 
     private Animator m_Animator;
+
+    public bool running = false;
+    public float speed = 5f;
+    public float runSpeed = 10f;
     private void OnEnable()
     {
-
-        m_Animator = GetComponent<Animator>();
-        m_movement = GetComponent<Movement>();
         m_Input = new PlayerControll();
         m_Input.Enable();
+    }
+    private void Start()
+    {
+        m_Animator = GetComponent<Animator>();
+        m_movement = GetComponent<Movement>();
     }
     private void OnDisable()
     {
         m_Input.Disable();
+        m_movement.m_rb.velocity = Vector2.zero;
     }
     private void FixedUpdate()
     {
+        if(Input.GetKeyDown(KeyCode.LeftShift)) 
+        {
+            running = true;
+        }
+        if (Input.GetKeyUp(KeyCode.LeftShift))
+        {
+            running = false;
+        }
         m_MoveInputValue = m_Input.Player.Move.ReadValue<Vector2>();
 
-        m_movement.Move(m_MoveInputValue);
+        m_movement.Move(m_MoveInputValue, running == true? runSpeed: speed);
+
         AnimatorMovement(m_MoveInputValue);
     }
     private void AnimatorMovement(Vector2 direction)

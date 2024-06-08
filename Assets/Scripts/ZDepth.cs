@@ -14,7 +14,7 @@ public class ZDepth : MonoBehaviour
     private void LateUpdate()
     {
         Vector3 Pos = t.position;
-        Pos.z = Pos.y * 0.00001f;
+        Pos.z = Pos.y * 0.0001f;
         t.position = Pos;
 
         if (stationary)

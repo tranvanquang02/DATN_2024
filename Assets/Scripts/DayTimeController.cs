@@ -10,6 +10,7 @@ public class DayTimeController : MonoBehaviour
 {
     const float SecondsInDay = 86400f;
     const float PhaseLeght = 900f; // 15 min 1 Tick
+    const float phasesInDay = 96f; //secondss in day divided by phaseLeght
     
     [SerializeField] Color DayLightColor = Color.white;
     [SerializeField] Color NightLightColor;
@@ -18,6 +19,7 @@ public class DayTimeController : MonoBehaviour
     private float days;
     [SerializeField] float TimeScale = 60f;
     [SerializeField] float StartAtTime = 28800f; //in Second
+    [SerializeField] float morningTime = 28800f;
     [SerializeField] TextMeshProUGUI Clock;
 
     [SerializeField] Light2D GlobalLight;
@@ -56,19 +58,33 @@ public class DayTimeController : MonoBehaviour
             NextDay();
         }
         TimeAgent();
+        if(Input.GetKeyDown(KeyCode.T))
+        {
+            SkipTime(hours : 4);
+        }
     }
-    int OldPhase = 0;
+    int OldPhase = -1;
     private void TimeAgent()
     {
-        int CurrentPhase = (int)(time / PhaseLeght);
-        if(OldPhase != CurrentPhase)
+        if(OldPhase == -1)
         {
-            OldPhase = CurrentPhase;
+            OldPhase = CalculatePhase();
+        }
+        int CurrentPhase = CalculatePhase();
+
+        while(OldPhase < CurrentPhase)
+        {
+            OldPhase += 1;
             for (int i = 0; i < agents.Count; i++)
             {
                 agents[i].Invoke();
             }
         }
+    }
+
+    private int CalculatePhase()
+    {
+        return (int)(time / PhaseLeght) + (int)(days * phasesInDay);
     }
 
     private void DayNight()
@@ -82,12 +98,36 @@ public class DayTimeController : MonoBehaviour
     {
         int hh = (int)hour;
         int mm = (int)minutes;
-        Clock.text = hh.ToString("00") + ":" + mm.ToString("00");
+        Clock.text = "Day"+ days.ToString() +"    "+ hh.ToString("00") + ":" + mm.ToString("00");
+
     }
 
     private void NextDay()
     {
-        time = 0;
+        time -= SecondsInDay;
         days +=1;
+    }
+    public void SkipTime(float seconds = 0, float minute = 0, float hours = 0 )
+    {
+        float timeToSkip = seconds;
+        timeToSkip += minute * 60f;
+        timeToSkip += hours * 3600f;
+
+        time += timeToSkip;
+    }
+
+    internal void SkipToMorning()
+    {
+        float secondToSkip = 0f;
+
+        if(time > morningTime)
+        {
+            secondToSkip += SecondsInDay - time + morningTime;
+        }
+        else
+        {
+            secondToSkip += morningTime - time;
+        }
+        SkipTime(secondToSkip);
     }
 }

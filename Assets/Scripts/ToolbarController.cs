@@ -58,6 +58,7 @@ public class ToolbarController : Singleton<ToolbarController>
             IconHighLight.Show = false;
             return; }
         IconHighLight.Show = item.iconHightlight;
+
         if(item.iconHightlight)
         {
             IconHighLight.Set(item.Icon);

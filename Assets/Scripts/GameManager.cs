@@ -10,4 +10,6 @@ public class GameManager : Singleton<GameManager>
     public DayTimeController DayTimeController;
     public DialogueSystem dialogueSystem;
     public ItemList itemDB;
+    public OnScreenMessageSystem messageSystem;
+    public SenceTint screenTint;
 }

@@ -35,7 +35,7 @@ public class Stat
 
 
 
-public class Player : MonoBehaviour
+public class Player : MonoBehaviour, IDamageable
 {
     public Stat hp;
     public Stat stamina;
@@ -46,7 +46,13 @@ public class Player : MonoBehaviour
     public bool isDead;
     public bool isExhausted;
 
-
+    DisableControls disableControls;
+    PlayerRepawn playerRespawn;
+    private void Awake()
+    {
+        disableControls = GetComponent<DisableControls>();
+        playerRespawn = GetComponent<PlayerRepawn>();
+    }
     private void Start()
     {
         UpdateHpBar();
@@ -77,7 +83,7 @@ public class Player : MonoBehaviour
         }
         if (Input.GetKeyDown(KeyCode.Alpha6))
         {
-            FullRest();
+            FullRest(0);
         }
 
 
@@ -92,12 +98,19 @@ public class Player : MonoBehaviour
     }
     public void TakeDamage(int amount)
     {
+        if(isDead) return;
         hp.Subtract(amount);
-        if(hp.currVal <= 0)
+        if(hp.currVal <= 0 && isDead != true)
         {
-            isDead = true;
+            Dead();
         }
         UpdateHpBar();
+    }
+    private void Dead()
+    {
+        isDead = true;
+        disableControls.DisableControl();
+        playerRespawn.StartRespawn();
     }
     public void Heal(int amount)
     {
@@ -114,19 +127,41 @@ public class Player : MonoBehaviour
         stamina.Subtract(amount);
         if(stamina.currVal < 0)
         {
-            isExhausted = true;
+            Echausted();
         }
         UpdateStaminaBar();
     }
+
+    private void Echausted()
+    {
+        isExhausted = true;
+        disableControls.DisableControl();
+        playerRespawn.StartRespawn();
+    }
+
     public void Rest(int amount)
     {
         stamina.Add(amount);
         UpdateStaminaBar();
     }
-    public void FullRest()
+    public void FullRest(int amount)
     {
         stamina.SetToMax();
         UpdateStaminaBar();
     }
-    
+
+    public void ApplyDamage(int damage)
+    {
+        TakeDamage(damage);
+    }
+
+    public void CalculateDamage(ref int damage)
+    {
+        
+    }
+
+    public void CheckState()
+    {
+       
+    }
 }

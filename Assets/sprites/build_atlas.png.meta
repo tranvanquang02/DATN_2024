@@ -8607,7 +8607,7 @@ TextureImporter:
       edges: []
       weights: []
     - serializedVersion: 2
-      name: build_atlas_404
+      name: floor1
       rect:
         serializedVersion: 2
         x: 384
@@ -8628,7 +8628,7 @@ TextureImporter:
       edges: []
       weights: []
     - serializedVersion: 2
-      name: build_atlas_405
+      name: floor2
       rect:
         serializedVersion: 2
         x: 416
@@ -8649,7 +8649,7 @@ TextureImporter:
       edges: []
       weights: []
     - serializedVersion: 2
-      name: build_atlas_406
+      name: floor3
       rect:
         serializedVersion: 2
         x: 448
@@ -9279,7 +9279,7 @@ TextureImporter:
       edges: []
       weights: []
     - serializedVersion: 2
-      name: build_atlas_436
+      name: floor4
       rect:
         serializedVersion: 2
         x: 384
@@ -9300,7 +9300,7 @@ TextureImporter:
       edges: []
       weights: []
     - serializedVersion: 2
-      name: build_atlas_437
+      name: floor5
       rect:
         serializedVersion: 2
         x: 416
@@ -9321,7 +9321,7 @@ TextureImporter:
       edges: []
       weights: []
     - serializedVersion: 2
-      name: build_atlas_438
+      name: floor6
       rect:
         serializedVersion: 2
         x: 448
@@ -9342,7 +9342,7 @@ TextureImporter:
       edges: []
       weights: []
     - serializedVersion: 2
-      name: build_atlas_439
+      name: floor10
       rect:
         serializedVersion: 2
         x: 480
@@ -9951,7 +9951,7 @@ TextureImporter:
       edges: []
       weights: []
     - serializedVersion: 2
-      name: build_atlas_468
+      name: floor7
       rect:
         serializedVersion: 2
         x: 384
@@ -9972,7 +9972,7 @@ TextureImporter:
       edges: []
       weights: []
     - serializedVersion: 2
-      name: build_atlas_469
+      name: floor8
       rect:
         serializedVersion: 2
         x: 416
@@ -9993,7 +9993,7 @@ TextureImporter:
       edges: []
       weights: []
     - serializedVersion: 2
-      name: build_atlas_470
+      name: floor9
       rect:
         serializedVersion: 2
         x: 448
@@ -10014,7 +10014,7 @@ TextureImporter:
       edges: []
       weights: []
     - serializedVersion: 2
-      name: build_atlas_471
+      name: floor11
       rect:
         serializedVersion: 2
         x: 480
@@ -10602,48 +10602,6 @@ TextureImporter:
       edges: []
       weights: []
     - serializedVersion: 2
-      name: build_atlas_499
-      rect:
-        serializedVersion: 2
-        x: 448
-        y: 480
-        width: 32
-        height: 32
-      alignment: 0
-      pivot: {x: 0.5, y: 0.5}
-      border: {x: 0, y: 0, z: 0, w: 0}
-      outline: []
-      physicsShape: []
-      tessellationDetail: 0
-      bones: []
-      spriteID: 3626dbd190d401e40b7fe0ec4d4f4344
-      internalID: -897068006
-      vertices: []
-      indices: 
-      edges: []
-      weights: []
-    - serializedVersion: 2
-      name: build_atlas_500
-      rect:
-        serializedVersion: 2
-        x: 480
-        y: 480
-        width: 32
-        height: 32
-      alignment: 0
-      pivot: {x: 0.5, y: 0.5}
-      border: {x: 0, y: 0, z: 0, w: 0}
-      outline: []
-      physicsShape: []
-      tessellationDetail: 0
-      bones: []
-      spriteID: aa791f4050dd2f649b0b4af22558d4bd
-      internalID: -1132432888
-      vertices: []
-      indices: 
-      edges: []
-      weights: []
-    - serializedVersion: 2
       name: build_atlas_501
       rect:
         serializedVersion: 2
@@ -11206,90 +11164,6 @@ TextureImporter:
       bones: []
       spriteID: 9b9f36724fcee0241a8402852285ad35
       internalID: 1124134894
-      vertices: []
-      indices: 
-      edges: []
-      weights: []
-    - serializedVersion: 2
-      name: build_atlas_528
-      rect:
-        serializedVersion: 2
-        x: 416
-        y: 448
-        width: 32
-        height: 32
-      alignment: 0
-      pivot: {x: 0.5, y: 0.5}
-      border: {x: 0, y: 0, z: 0, w: 0}
-      outline: []
-      physicsShape: []
-      tessellationDetail: 0
-      bones: []
-      spriteID: 77d3290aa471c754b9ea9452c4cc2829
-      internalID: 1988967058
-      vertices: []
-      indices: 
-      edges: []
-      weights: []
-    - serializedVersion: 2
-      name: build_atlas_529
-      rect:
-        serializedVersion: 2
-        x: 448
-        y: 448
-        width: 32
-        height: 32
-      alignment: 0
-      pivot: {x: 0.5, y: 0.5}
-      border: {x: 0, y: 0, z: 0, w: 0}
-      outline: []
-      physicsShape: []
-      tessellationDetail: 0
-      bones: []
-      spriteID: dc660fbbdc7fd4a43ad6b939d215cb60
-      internalID: -1231487066
-      vertices: []
-      indices: 
-      edges: []
-      weights: []
-    - serializedVersion: 2
-      name: build_atlas_530
-      rect:
-        serializedVersion: 2
-        x: 480
-        y: 448
-        width: 32
-        height: 32
-      alignment: 0
-      pivot: {x: 0.5, y: 0.5}
-      border: {x: 0, y: 0, z: 0, w: 0}
-      outline: []
-      physicsShape: []
-      tessellationDetail: 0
-      bones: []
-      spriteID: 11c5f48febb735145a59f990fe4422b4
-      internalID: -1566329899
-      vertices: []
-      indices: 
-      edges: []
-      weights: []
-    - serializedVersion: 2
-      name: build_atlas_531
-      rect:
-        serializedVersion: 2
-        x: 512
-        y: 448
-        width: 32
-        height: 32
-      alignment: 0
-      pivot: {x: 0.5, y: 0.5}
-      border: {x: 0, y: 0, z: 0, w: 0}
-      outline: []
-      physicsShape: []
-      tessellationDetail: 0
-      bones: []
-      spriteID: 1afa1e51b2d051b449936c562b867114
-      internalID: 1108554784
       vertices: []
       indices: 
       edges: []
@@ -11862,90 +11736,6 @@ TextureImporter:
       edges: []
       weights: []
     - serializedVersion: 2
-      name: build_atlas_559
-      rect:
-        serializedVersion: 2
-        x: 416
-        y: 416
-        width: 32
-        height: 32
-      alignment: 0
-      pivot: {x: 0.5, y: 0.5}
-      border: {x: 0, y: 0, z: 0, w: 0}
-      outline: []
-      physicsShape: []
-      tessellationDetail: 0
-      bones: []
-      spriteID: 23eb92f906e457145af7481117931ba4
-      internalID: 1863189354
-      vertices: []
-      indices: 
-      edges: []
-      weights: []
-    - serializedVersion: 2
-      name: build_atlas_560
-      rect:
-        serializedVersion: 2
-        x: 448
-        y: 416
-        width: 32
-        height: 32
-      alignment: 0
-      pivot: {x: 0.5, y: 0.5}
-      border: {x: 0, y: 0, z: 0, w: 0}
-      outline: []
-      physicsShape: []
-      tessellationDetail: 0
-      bones: []
-      spriteID: 278e9d515d9b4c64eae2b92c8d1ecdd9
-      internalID: 1987853761
-      vertices: []
-      indices: 
-      edges: []
-      weights: []
-    - serializedVersion: 2
-      name: build_atlas_561
-      rect:
-        serializedVersion: 2
-        x: 480
-        y: 416
-        width: 32
-        height: 32
-      alignment: 0
-      pivot: {x: 0.5, y: 0.5}
-      border: {x: 0, y: 0, z: 0, w: 0}
-      outline: []
-      physicsShape: []
-      tessellationDetail: 0
-      bones: []
-      spriteID: aebd483b8ef16f84fa45c93339608ee4
-      internalID: -2024215462
-      vertices: []
-      indices: 
-      edges: []
-      weights: []
-    - serializedVersion: 2
-      name: build_atlas_562
-      rect:
-        serializedVersion: 2
-        x: 512
-        y: 416
-        width: 32
-        height: 32
-      alignment: 0
-      pivot: {x: 0.5, y: 0.5}
-      border: {x: 0, y: 0, z: 0, w: 0}
-      outline: []
-      physicsShape: []
-      tessellationDetail: 0
-      bones: []
-      spriteID: 1b898ef65f2f7d147a013a7f8fe1b145
-      internalID: -1427967365
-      vertices: []
-      indices: 
-      edges: []
-      weights: []
-    - serializedVersion: 2
       name: build_atlas_563
       rect:
         serializedVersion: 2
@@ -12487,90 +12277,6 @@ TextureImporter:
       bones: []
       spriteID: 9ce4f97ce2e93d241b335ba5ff6bc30e
       internalID: -514776087
-      vertices: []
-      indices: 
-      edges: []
-      weights: []
-    - serializedVersion: 2
-      name: build_atlas_589
-      rect:
-        serializedVersion: 2
-        x: 416
-        y: 384
-        width: 32
-        height: 32
-      alignment: 0
-      pivot: {x: 0.5, y: 0.5}
-      border: {x: 0, y: 0, z: 0, w: 0}
-      outline: []
-      physicsShape: []
-      tessellationDetail: 0
-      bones: []
-      spriteID: b342bc49e88402b4bbec2a8952a33610
-      internalID: -1941121685
-      vertices: []
-      indices: 
-      edges: []
-      weights: []
-    - serializedVersion: 2
-      name: build_atlas_590
-      rect:
-        serializedVersion: 2
-        x: 448
-        y: 384
-        width: 32
-        height: 32
-      alignment: 0
-      pivot: {x: 0.5, y: 0.5}
-      border: {x: 0, y: 0, z: 0, w: 0}
-      outline: []
-      physicsShape: []
-      tessellationDetail: 0
-      bones: []
-      spriteID: f03f848c51028aa45916078fcb5a57b0
-      internalID: 1437510003
-      vertices: []
-      indices: 
-      edges: []
-      weights: []
-    - serializedVersion: 2
-      name: build_atlas_591
-      rect:
-        serializedVersion: 2
-        x: 480
-        y: 384
-        width: 32
-        height: 32
-      alignment: 0
-      pivot: {x: 0.5, y: 0.5}
-      border: {x: 0, y: 0, z: 0, w: 0}
-      outline: []
-      physicsShape: []
-      tessellationDetail: 0
-      bones: []
-      spriteID: fb2007002aa03fd418f54addecef0ec6
-      internalID: -1378875550
-      vertices: []
-      indices: 
-      edges: []
-      weights: []
-    - serializedVersion: 2
-      name: build_atlas_592
-      rect:
-        serializedVersion: 2
-        x: 512
-        y: 384
-        width: 32
-        height: 32
-      alignment: 0
-      pivot: {x: 0.5, y: 0.5}
-      border: {x: 0, y: 0, z: 0, w: 0}
-      outline: []
-      physicsShape: []
-      tessellationDetail: 0
-      bones: []
-      spriteID: cddb7dc3eb37c1241b4b6f7bb5c9b4d8
-      internalID: -1643713852
       vertices: []
       indices: 
       edges: []
@@ -13159,90 +12865,6 @@ TextureImporter:
       bones: []
       spriteID: c4f73f38714d2b04eb3c66b8008febfe
       internalID: -1647671235
-      vertices: []
-      indices: 
-      edges: []
-      weights: []
-    - serializedVersion: 2
-      name: build_atlas_621
-      rect:
-        serializedVersion: 2
-        x: 416
-        y: 352
-        width: 32
-        height: 32
-      alignment: 0
-      pivot: {x: 0.5, y: 0.5}
-      border: {x: 0, y: 0, z: 0, w: 0}
-      outline: []
-      physicsShape: []
-      tessellationDetail: 0
-      bones: []
-      spriteID: 1d3620ca31fcd5b4ea8a02d70169568a
-      internalID: 410616872
-      vertices: []
-      indices: 
-      edges: []
-      weights: []
-    - serializedVersion: 2
-      name: build_atlas_622
-      rect:
-        serializedVersion: 2
-        x: 448
-        y: 352
-        width: 32
-        height: 32
-      alignment: 0
-      pivot: {x: 0.5, y: 0.5}
-      border: {x: 0, y: 0, z: 0, w: 0}
-      outline: []
-      physicsShape: []
-      tessellationDetail: 0
-      bones: []
-      spriteID: a04d62c2a7afa744097e7d2e50211a30
-      internalID: 421020781
-      vertices: []
-      indices: 
-      edges: []
-      weights: []
-    - serializedVersion: 2
-      name: build_atlas_623
-      rect:
-        serializedVersion: 2
-        x: 480
-        y: 352
-        width: 32
-        height: 32
-      alignment: 0
-      pivot: {x: 0.5, y: 0.5}
-      border: {x: 0, y: 0, z: 0, w: 0}
-      outline: []
-      physicsShape: []
-      tessellationDetail: 0
-      bones: []
-      spriteID: c070b7af43985064d82c5c37b0998930
-      internalID: -680296246
-      vertices: []
-      indices: 
-      edges: []
-      weights: []
-    - serializedVersion: 2
-      name: build_atlas_624
-      rect:
-        serializedVersion: 2
-        x: 512
-        y: 352
-        width: 32
-        height: 32
-      alignment: 0
-      pivot: {x: 0.5, y: 0.5}
-      border: {x: 0, y: 0, z: 0, w: 0}
-      outline: []
-      physicsShape: []
-      tessellationDetail: 0
-      bones: []
-      spriteID: 2ef8fd03ec027e444a8c4bfcf0b04c95
-      internalID: -945337969
       vertices: []
       indices: 
       edges: []
@@ -20387,6 +20009,27 @@ TextureImporter:
       indices: 
       edges: []
       weights: []
+    - serializedVersion: 2
+      name: Store
+      rect:
+        serializedVersion: 2
+        x: 416
+        y: 353
+        width: 127
+        height: 158
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: c3f55e6d3ea04244bac506f9415d1375
+      internalID: 374059388
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
     outline: []
     physicsShape: []
     bones: []
@@ -20399,6 +20042,7 @@ TextureImporter:
     secondaryTextures: []
     nameFileIdTable:
       Door: 1764422578
+      Store: 374059388
       build_atlas_0: 1726553136
       build_atlas_1: -968013003
       build_atlas_10: -564623331
@@ -20732,9 +20376,6 @@ TextureImporter:
       build_atlas_401: -990302414
       build_atlas_402: -60302228
       build_atlas_403: -1090258788
-      build_atlas_404: -2046803849
-      build_atlas_405: 120034164
-      build_atlas_406: -502479984
       build_atlas_407: -1860600860
       build_atlas_408: -565945464
       build_atlas_409: 1811808300
@@ -20764,10 +20405,6 @@ TextureImporter:
       build_atlas_433: 485006610
       build_atlas_434: 1016333578
       build_atlas_435: -1273589311
-      build_atlas_436: -2036552469
-      build_atlas_437: 272134532
-      build_atlas_438: 700520379
-      build_atlas_439: 1145661018
       build_atlas_44: 943114815
       build_atlas_440: 308818601
       build_atlas_441: -1594744791
@@ -20796,11 +20433,7 @@ TextureImporter:
       build_atlas_465: -1601553123
       build_atlas_466: -745337165
       build_atlas_467: 1663920917
-      build_atlas_468: -1498323450
-      build_atlas_469: -1701752942
       build_atlas_47: -1450458729
-      build_atlas_470: -1729275529
-      build_atlas_471: -1100210508
       build_atlas_472: -1782639462
       build_atlas_473: 1644267868
       build_atlas_474: 330752250
@@ -21363,6 +20996,17 @@ TextureImporter:
       fence7: 284307968
       fence8: -344482965
       fence9: 872248651
+      floor1: -2046803849
+      floor10: 1145661018
+      floor11: -1100210508
+      floor2: 120034164
+      floor3: -502479984
+      floor4: -2036552469
+      floor5: 272134532
+      floor6: 700520379
+      floor7: -1498323450
+      floor8: -1701752942
+      floor9: -1729275529
   mipmapLimitGroupName: 
   pSDRemoveMatte: 0
   userData: 

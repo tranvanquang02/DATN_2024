@@ -11,11 +11,18 @@ public class InventoryButton : MonoBehaviour, IPointerClickHandler
     [SerializeField] TextMeshProUGUI text;
     [SerializeField] Image HightLight;
 
+    ItemPanel itemPanel;
     int MyIndex;
+
+    public void SetItemPanel(ItemPanel itemPanel)
+    {
+        this.itemPanel = itemPanel;
+    }
     public void SetIndex(int index)
     {
         MyIndex = index;
     }
+
     public void Set(ItemSlot slot)
     {
        Icon.sprite = slot.item.Icon;
@@ -39,8 +46,7 @@ public class InventoryButton : MonoBehaviour, IPointerClickHandler
 
     public void OnPointerClick(PointerEventData eventData)
     {
-        ItemPanel itemPanel = transform.parent.GetComponent<ItemPanel>();
-        itemPanel.OnClick(MyIndex);
+           itemPanel.OnClick(MyIndex);
     }
     public void Hightight(bool a)
     {

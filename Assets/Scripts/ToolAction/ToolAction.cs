@@ -4,6 +4,7 @@ using UnityEngine;
 
 public class ToolAction : ScriptableObject
 {
+    public int enegyCost = 0; 
     public virtual bool OnApply(Vector2 worldPoint)
     {
         Debug.LogWarning("On Apply not implment");

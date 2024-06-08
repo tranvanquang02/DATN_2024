@@ -12,5 +12,6 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 625b9f98f02e55842ab65745008f62ea, type: 3}
   m_Name: MineOrc
   m_EditorClassIdentifier: 
+  enegyCost: 3
   SizeOfInteracableArea: 1
   CanHitNodeOfType: 02000000

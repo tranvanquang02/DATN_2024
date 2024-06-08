@@ -30,6 +30,7 @@ GameObject:
   - component: {fileID: 8191489104126304237}
   - component: {fileID: 7926768277838301956}
   - component: {fileID: 4353726322275209316}
+  - component: {fileID: 9043369360172412286}
   m_Layer: 6
   m_Name: Player
   m_TagString: Player
@@ -184,7 +185,7 @@ Rigidbody2D:
   m_PrefabInstance: {fileID: 0}
   m_PrefabAsset: {fileID: 0}
   m_GameObject: {fileID: 6860351848024520587}
-  m_BodyType: 0
+  m_BodyType: 1
   m_Simulated: 1
   m_UseFullKinematicContacts: 0
   m_UseAutoMass: 0
@@ -236,6 +237,7 @@ MonoBehaviour:
   iconHighLight: {fileID: 0}
   MaxDistance: 1.5
   weaponEnegyCost: 1
+  toolTimeOut: 2
 --- !u!114 &4250526329225417658
 MonoBehaviour:
   m_ObjectHideFlags: 0
@@ -396,7 +398,7 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   respawnPointPositon: {x: 50, y: 15, z: 0}
-  respawnPonitScene: FarmSence
+  respawnPonitScene: FarmScene
 --- !u!114 &8191489104126304237
 MonoBehaviour:
   m_ObjectHideFlags: 0
@@ -439,3 +441,15 @@ MonoBehaviour:
   inventoryPanel: {fileID: 0}
   playerInventory: {fileID: 11400000, guid: b576290f01e34e54b8fc08cd6dca76e0, type: 2}
   inventoryItemPanel: {fileID: 0}
+--- !u!114 &9043369360172412286
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 6860351848024520587}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: a82e67fd744bfbf4fb768d15ba39d27f, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 

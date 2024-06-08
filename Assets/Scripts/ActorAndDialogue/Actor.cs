@@ -7,6 +7,4 @@ public class Actor : ScriptableObject
 {
     public string Name;
     public Sprite portrait;
-
-    
 }

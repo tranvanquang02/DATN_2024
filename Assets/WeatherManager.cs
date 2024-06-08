@@ -25,7 +25,7 @@ public class WeatherManager : TimeAgent
         OnTimeTick += RandomWeatherChangeCheck;
         UpdateWeather();
     }
-    public void RandomWeatherChangeCheck()
+    public void RandomWeatherChangeCheck(DayTimeController dayTimeController)
     {
         if(Random.value <= chanceToChangeWeather)
         {

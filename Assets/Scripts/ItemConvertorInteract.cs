@@ -43,7 +43,7 @@ public class ItemConvertorInteract : Interacable, IPersistant
         Animate();
     }
 
-    private void ItemConvertProcess()
+    private void ItemConvertProcess(DayTimeController dayTimeController)
     {
         if (data.itemSlot == null) { return; }
         if (data.timer > 0)

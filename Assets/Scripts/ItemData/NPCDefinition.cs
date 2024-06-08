@@ -34,6 +34,9 @@ public class NPCDefinition : ScriptableObject
     public List<Item> itemLike;
     public List<Item> itemDislike;
 
+    [Header("Dialogues")]
+    public List<DialogueContainer> dialogueContainer;
+
     [Header("Schedule WIP")]
     public string schedule;
 }

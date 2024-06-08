@@ -6,6 +6,7 @@ using UnityEngine.Tilemaps;
 
 public class ToolPlayerController : MonoBehaviour
 {
+    PlayerLevel playerLevel;
     private PlayerController playerController;
     private Player player;
     private Rigidbody2D rb;
@@ -23,6 +24,9 @@ public class ToolPlayerController : MonoBehaviour
     AttackController attackController;
     Vector3Int SelectedTilePosition;
     bool Selectable;
+
+    [SerializeField] float toolTimeOut = 1f;
+    float timer;
     private void Awake()
     {
         playerController = GetComponent<PlayerController>();
@@ -31,10 +35,12 @@ public class ToolPlayerController : MonoBehaviour
         animator = GetComponent<Animator>();
         attackController = GetComponent<AttackController>();
         player = GetComponent<Player>();
+        playerLevel = GetComponent<PlayerLevel>();  
     }
 
     private void Update()
     {
+        if(timer > 0f) { timer -= Time.deltaTime; }
         if(Input.GetMouseButtonDown(0))
         {
             WeaponAction();
@@ -54,19 +60,7 @@ public class ToolPlayerController : MonoBehaviour
         }
     }
 
-    private void WeaponAction()
-    {
-        Item item = toolbarController.GetItem;
-        if (item == null) { return; }
-        if(item.isWeapon == false) { return; }
-
-
-        EnegyCost(weaponEnegyCost);
-
-        Vector2 position = rb.position + playerController.LastMotionVector * OffsetDistance;
-
-        attackController.Attack(item.damage, playerController.LastMotionVector);
-    }
+    
 
     private void EnegyCost(int enegyCost)
     {
@@ -90,9 +84,25 @@ public class ToolPlayerController : MonoBehaviour
         markerManager.Show(Selectable);
         iconHighLight.CanSelect = Selectable;
     }
+    private void WeaponAction()
+    {
+        Item item = toolbarController.GetItem;
+        if (item == null) { return; }
+        if (item.isWeapon == false) { return; }
+
+        if (timer > 0f) { return; }
+        EnegyCost(weaponEnegyCost);
+
+        Vector2 position = rb.position + playerController.LastMotionVector * OffsetDistance;
+
+        attackController.Attack(item.damage, playerController.LastMotionVector);
+
+        timer = toolTimeOut;
+    }
     //dụng cụ tương tác với cây, đá,.. nhưng không phải tile map
     private bool UseToolworld()
-    {        
+    {
+        if (timer > 0f) { return false; }
         if (Selectable == true)
         {
 
@@ -101,46 +111,76 @@ public class ToolPlayerController : MonoBehaviour
             if (item == null) { return false; }
             if (item.OnAction == null) { return false; }
 
-            EnegyCost(item.OnAction.enegyCost);
+            EnegyCost(GetEnegyCost(item.OnAction));
 
             animator.SetTrigger("act");
             bool complete = item.OnAction.OnApply(position);
             if (complete == true)
             {
+                playerLevel.AddExperience(item.OnAction.SkillType, item.OnAction.skillExpReward);
                 if (item.OnItemUsed != null)
+                {
                     item.OnItemUsed.OnItemUsed(item, GameManager.Instance.inventoryContainer);
+                }
+
             }
+            timer = toolTimeOut;
             return complete;
         }
         else
         {
             return false;
         }
+        
     }
     //dụng cụ tương tác với tile map
     private void UseToolGrid()
     {
+        if (timer > 0f) { return; }
         if (Selectable == true)
         {
             Item item = toolbarController.GetItem;
-            if (item == null) {
+            if (item == null)
+            {
                 PickUpTile();
-                return; }
+                return;
+            }
             if (item.OnTileMapAction == null) { return; }
 
-            EnegyCost(item.OnTileMapAction.enegyCost);
+            EnegyCost(GetEnegyCost(item.OnTileMapAction));
 
             bool complete = item.OnTileMapAction.OnApplyOnTileMap(
-                SelectedTilePosition, 
-                tileMapManager, 
+                SelectedTilePosition,
+                tileMapManager,
                 item);
-            if (complete == true) {
-                if(item.OnItemUsed != null)
+            if (complete == true)
+            {
+                playerLevel.AddExperience(item.OnTileMapAction.SkillType, item.OnTileMapAction.skillExpReward);
+                if (item.OnItemUsed != null)
+                {
                     item.OnItemUsed.OnItemUsed(item, GameManager.Instance.inventoryContainer);
+                }
             }
         }
+        timer = toolTimeOut;
     }
 
+    private int GetEnegyCost(ToolAction action)
+    {
+        int enegyCost = action.enegyCost;
+        enegyCost -= playerLevel.GetLevel(action.SkillType);
+
+        if(enegyCost < 1)
+        {
+            enegyCost = 1;
+        }
+        return enegyCost;
+    }
+
+    void CheckInventoryOpen()
+    {
+       
+    }
     private void PickUpTile()
     {
         if(onTilePickUp == null) { return; }

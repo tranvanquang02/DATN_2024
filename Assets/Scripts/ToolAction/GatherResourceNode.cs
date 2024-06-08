@@ -15,6 +15,8 @@ public class GatherResourceNode : ToolAction
     [SerializeField] float SizeOfInteracableArea;
 
     [SerializeField] List<ResourceNodeType> CanHitNodeOfType;
+
+
     public override bool OnApply(Vector2 worldPoint)
     {
 

@@ -19,4 +19,7 @@ MonoBehaviour:
   romanceableGender: 0
   itemLike: []
   itemDislike: []
+  dialogueContainer:
+  - {fileID: 11400000, guid: 7a029916c0f090849ab284fd2eaa0878, type: 2}
+  - {fileID: 11400000, guid: 270f5b4f2088dec4bb0aae500a2451f1, type: 2}
   schedule: 

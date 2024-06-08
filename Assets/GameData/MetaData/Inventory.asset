@@ -15,22 +15,22 @@ MonoBehaviour:
   slots:
   - item: {fileID: 0}
     count: 0
+  - item: {fileID: 11400000, guid: b105e68d205d9d0469fffdbb3e4e483f, type: 2}
+    count: 311
   - item: {fileID: 11400000, guid: 75f45bd19ed1f9641afd50fc04f9b4a0, type: 2}
     count: 0
-  - item: {fileID: 11400000, guid: b105e68d205d9d0469fffdbb3e4e483f, type: 2}
-    count: 269
   - item: {fileID: 11400000, guid: c6b3c2b50e925b84eb8da4bce4246d6a, type: 2}
-    count: 17
-  - item: {fileID: 11400000, guid: fecda46abd0ce0645a5ced26d760e973, type: 2}
+    count: 204
+  - item: {fileID: 11400000, guid: 738760933d64d7b43a0df93513e8b6ec, type: 2}
     count: 0
   - item: {fileID: 11400000, guid: f0963cb74f4ead2468303e6efb85bd52, type: 2}
     count: 1998
   - item: {fileID: 11400000, guid: 157d711aa9e6124408f77e70a9d01875, type: 2}
-    count: 50
+    count: 0
   - item: {fileID: 11400000, guid: 68ca5a25c7e977948b901a6bae3f8292, type: 2}
     count: 0
   - item: {fileID: 11400000, guid: 3df79e72d5d58e944aa5858cf698352e, type: 2}
-    count: 0
+    count: 10
   - item: {fileID: 11400000, guid: 4fc9af17620463c43aa2923c397c8f12, type: 2}
     count: 0
   - item: {fileID: 11400000, guid: 738760933d64d7b43a0df93513e8b6ec, type: 2}

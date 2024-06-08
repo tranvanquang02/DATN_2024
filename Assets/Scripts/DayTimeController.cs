@@ -6,6 +6,23 @@ using UnityEngine;
 using UnityEngine.Rendering.Universal;
 using UnityEngine.UI;
 
+public enum DayOfWeek
+{
+    Sunday,
+    Monday,
+    Tuesday,
+    Wednesday,
+    Thursday,
+    Friday,
+    Satuday
+}
+public enum Season
+{
+    Winter,
+    Spring,
+    Summer,
+    Autumn
+}
 public class DayTimeController : MonoBehaviour
 {
     const float SecondsInDay = 86400f;
@@ -16,15 +33,22 @@ public class DayTimeController : MonoBehaviour
     [SerializeField] Color NightLightColor;
     [SerializeField] AnimationCurve NightTimeCurve;
     float time;
-    private float days;
+    public int days;
+    public DayOfWeek dayOfWeek;
+    public Season currentSeason;
+    const int SeasonLength = 30;
     [SerializeField] float TimeScale = 60f;
     [SerializeField] float StartAtTime = 28800f; //in Second
     [SerializeField] float morningTime = 28800f;
-    [SerializeField] TextMeshProUGUI Clock;
+    
 
     [SerializeField] Light2D GlobalLight;
 
     List<TimeAgent> agents;
+
+    [SerializeField] TextMeshProUGUI Clock;
+    [SerializeField] TextMeshProUGUI dayOfTheWeek;
+    [SerializeField] TextMeshProUGUI season;
 
     private void Awake()
     {
@@ -33,6 +57,7 @@ public class DayTimeController : MonoBehaviour
     private void Start()
     {
         time = StartAtTime;
+        UpdateDayText();
     }
     public void SubscriBe(TimeAgent TimeAgent)
     {
@@ -77,7 +102,7 @@ public class DayTimeController : MonoBehaviour
             OldPhase += 1;
             for (int i = 0; i < agents.Count; i++)
             {
-                agents[i].Invoke();
+                agents[i].Invoke(this);
             }
         }
     }
@@ -105,8 +130,43 @@ public class DayTimeController : MonoBehaviour
     private void NextDay()
     {
         time -= SecondsInDay;
-        days +=1;
+        days += 1;
+
+        int dayNum = (int)dayOfWeek;
+        dayNum += 1;
+        if (dayNum > 7)
+        {
+            dayNum = 0;
+        }
+        dayOfWeek = (DayOfWeek)dayNum;
+        UpdateDayText();
+        if(days >= SeasonLength)
+        {
+
+            NextSeason();
+        }
+
     }
+
+    private void NextSeason()
+    {
+        days = 0;
+        int seasonNum = (int)currentSeason;
+        seasonNum += 1;
+
+        if(seasonNum >=4)
+        {
+            seasonNum = 0;
+        }
+        currentSeason = (Season)seasonNum;
+    }
+
+    private void UpdateDayText()
+    {
+        dayOfTheWeek.text = dayOfWeek.ToString();
+        season.text = currentSeason.ToString();
+    }
+
     public void SkipTime(float seconds = 0, float minute = 0, float hours = 0 )
     {
         float timeToSkip = seconds;

@@ -35,11 +35,11 @@ public class ObjectSpawner : MonoBehaviour
         }
         else
         {
-            Spawn();
+            Spawn(null);
             //Destroy(gameObject);
         }
     }
-    void UpdateSpawnedObjectCount()
+    void UpdateSpawnedObjectCount(DayTimeController dayTimeController)
     {
         for (int i = 0; i < spawnedObjects.Count; i++)
         {
@@ -55,7 +55,7 @@ public class ObjectSpawner : MonoBehaviour
     {
         spawnedObjects.Remove(spawnedObject);
     }
-    void Spawn()
+    void Spawn(DayTimeController dayTimeController)
     {
         if (Random.value > probability) { return; }
         if(spawnedObjects != null)

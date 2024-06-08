@@ -39,7 +39,7 @@ public class TileMapCropManager : TimeAgent
             container.crops[i].spriteRenderer = null;
         }
     }
-    public void Tick()
+    public void Tick(DayTimeController dayTimeController)
      {
         if (targetTilemap == null) { return; }
 

@@ -4,7 +4,11 @@ using UnityEngine;
 
 public class ToolAction : ScriptableObject
 {
-    public int enegyCost = 0; 
+    public int enegyCost = 0;
+
+    public SkillType SkillType;
+
+    public int skillExpReward = 100;
     public virtual bool OnApply(Vector2 worldPoint)
     {
         Debug.LogWarning("On Apply not implment");

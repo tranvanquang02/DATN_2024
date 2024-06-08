@@ -9,11 +9,11 @@ MonoBehaviour:
   m_GameObject: {fileID: 0}
   m_Enabled: 1
   m_EditorHideFlags: 0
-  m_Script: {fileID: 11500000, guid: 625b9f98f02e55842ab65745008f62ea, type: 3}
-  m_Name: MineOrc
+  m_Script: {fileID: 11500000, guid: e8ee0de94cb94a042acac42dc105df23, type: 3}
+  m_Name: New Dialogue Container
   m_EditorClassIdentifier: 
-  enegyCost: 3
-  SkillType: 1
-  skillExpReward: 100
-  SizeOfInteracableArea: 1
-  CanHitNodeOfType: 02000000
+  line:
+  - Ilove You Bay
+  - 2e
+  - dsfrg
+  actor: {fileID: 11400000, guid: f8050ab51f816a940b9fed8d52c4ea7a, type: 2}

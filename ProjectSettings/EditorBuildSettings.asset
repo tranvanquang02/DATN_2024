@@ -6,12 +6,27 @@ EditorBuildSettings:
   serializedVersion: 2
   m_Scenes:
   - enabled: 1
-    path: Assets/Scenes/FarmScene.unity
-    guid: 8c9cfa26abfee488c85f1582747f6a02
+    path: Assets/Scenes/MainMenuScene.unity
+    guid: f428e6fdd99b3374fa39985d084af1ed
   - enabled: 1
     path: Assets/Scenes/Essential.unity
     guid: 39d3d2391cb79ac45b5bbb875299d3fe
   - enabled: 1
-    path: Assets/Scenes/Home1.unity
+    path: Assets/Scenes/BeachScene.unity
+    guid: dbb51cf62bd814d4e83bf62847580148
+  - enabled: 1
+    path: Assets/Scenes/ForestScene.unity
     guid: cb52af8cb5c3dcc4e808b7e2fe1e43fd
+  - enabled: 1
+    path: Assets/Scenes/FarmScene.unity
+    guid: 8c9cfa26abfee488c85f1582747f6a02
+  - enabled: 1
+    path: Assets/Scenes/StoreScene.unity
+    guid: fc20f3e0c5e57144aae58c61e4e94efe
+  - enabled: 1
+    path: Assets/Scenes/CaveIntoScene.unity
+    guid: d6635fea8b824d641b4910640dc77df9
+  - enabled: 1
+    path: Assets/Scenes/CaveScene.unity
+    guid: 77d1f4fa6cfadfd4ea675919c81a283d
   m_configObjects: {}

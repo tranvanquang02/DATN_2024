@@ -26,8 +26,7 @@ public class NPCMove : MonoBehaviour
     private void FixedUpdate()
     {
         if(moveTo == null) { return; }
-        Debug.Log(Vector3.Distance(transform.position, moveTo.position));
-        if(Vector3.Distance(transform.position, moveTo.position) < 1f)
+        if (Vector3.Distance(transform.position, moveTo.position) < 1f)
         {
             StopMoving();
             return;

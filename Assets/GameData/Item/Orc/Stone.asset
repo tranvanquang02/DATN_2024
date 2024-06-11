@@ -14,7 +14,7 @@ MonoBehaviour:
   m_EditorClassIdentifier: 
   id: 9
   Name: stone
-  Icon: {fileID: 21300000, guid: 517ee08c5e0d8f5468f4b25ee154e89b, type: 3}
+  Icon: {fileID: -781414879, guid: f9ff9c1d8067aae4186ba9c8bee83dda, type: 3}
   Stackable: 1
   OnAction: {fileID: 0}
   OnTileMapAction: {fileID: 0}

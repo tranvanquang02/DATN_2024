@@ -1047,7 +1047,7 @@ TextureImporter:
       edges: []
       weights: []
     - serializedVersion: 2
-      name: ore_44
+      name: CoalOrc
       rect:
         serializedVersion: 2
         x: 0
@@ -1089,7 +1089,7 @@ TextureImporter:
       edges: []
       weights: []
     - serializedVersion: 2
-      name: ore_46
+      name: SilverOrc
       rect:
         serializedVersion: 2
         x: 64
@@ -1110,7 +1110,7 @@ TextureImporter:
       edges: []
       weights: []
     - serializedVersion: 2
-      name: ore_47
+      name: CooperOrc
       rect:
         serializedVersion: 2
         x: 96
@@ -1131,7 +1131,7 @@ TextureImporter:
       edges: []
       weights: []
     - serializedVersion: 2
-      name: ore_48
+      name: vvvv
       rect:
         serializedVersion: 2
         x: 128
@@ -1152,7 +1152,7 @@ TextureImporter:
       edges: []
       weights: []
     - serializedVersion: 2
-      name: ore_49
+      name: GoldOrc
       rect:
         serializedVersion: 2
         x: 160
@@ -1173,7 +1173,7 @@ TextureImporter:
       edges: []
       weights: []
     - serializedVersion: 2
-      name: ore_50
+      name: RockNor
       rect:
         serializedVersion: 2
         x: 192
@@ -1278,7 +1278,7 @@ TextureImporter:
       edges: []
       weights: []
     - serializedVersion: 2
-      name: ore_55
+      name: coal
       rect:
         serializedVersion: 2
         x: 0
@@ -1320,7 +1320,7 @@ TextureImporter:
       edges: []
       weights: []
     - serializedVersion: 2
-      name: ore_57
+      name: silver
       rect:
         serializedVersion: 2
         x: 64
@@ -1341,7 +1341,7 @@ TextureImporter:
       edges: []
       weights: []
     - serializedVersion: 2
-      name: ore_58
+      name: Copper
       rect:
         serializedVersion: 2
         x: 96
@@ -1362,7 +1362,7 @@ TextureImporter:
       edges: []
       weights: []
     - serializedVersion: 2
-      name: ore_59
+      name: Rock
       rect:
         serializedVersion: 2
         x: 128
@@ -1383,7 +1383,7 @@ TextureImporter:
       edges: []
       weights: []
     - serializedVersion: 2
-      name: ore_60
+      name: Gold
       rect:
         serializedVersion: 2
         x: 160
@@ -1446,7 +1446,7 @@ TextureImporter:
       edges: []
       weights: []
     - serializedVersion: 2
-      name: ore_63
+      name: coal1
       rect:
         serializedVersion: 2
         x: 0
@@ -1488,7 +1488,7 @@ TextureImporter:
       edges: []
       weights: []
     - serializedVersion: 2
-      name: ore_65
+      name: silver1
       rect:
         serializedVersion: 2
         x: 64
@@ -1509,7 +1509,7 @@ TextureImporter:
       edges: []
       weights: []
     - serializedVersion: 2
-      name: ore_66
+      name: copper1
       rect:
         serializedVersion: 2
         x: 96
@@ -1530,7 +1530,7 @@ TextureImporter:
       edges: []
       weights: []
     - serializedVersion: 2
-      name: ore_67
+      name: rock1
       rect:
         serializedVersion: 2
         x: 128
@@ -1551,7 +1551,7 @@ TextureImporter:
       edges: []
       weights: []
     - serializedVersion: 2
-      name: ore_68
+      name: gold1
       rect:
         serializedVersion: 2
         x: 160
@@ -1572,7 +1572,7 @@ TextureImporter:
       edges: []
       weights: []
     - serializedVersion: 2
-      name: ore_69
+      name: coa
       rect:
         serializedVersion: 2
         x: 0
@@ -1614,7 +1614,7 @@ TextureImporter:
       edges: []
       weights: []
     - serializedVersion: 2
-      name: ore_71
+      name: silverbar
       rect:
         serializedVersion: 2
         x: 64
@@ -1635,7 +1635,7 @@ TextureImporter:
       edges: []
       weights: []
     - serializedVersion: 2
-      name: ore_72
+      name: copperbar
       rect:
         serializedVersion: 2
         x: 96
@@ -1677,7 +1677,7 @@ TextureImporter:
       edges: []
       weights: []
     - serializedVersion: 2
-      name: ore_74
+      name: goalbar
       rect:
         serializedVersion: 2
         x: 160
@@ -1834,10 +1834,25 @@ TextureImporter:
     weights: []
     secondaryTextures: []
     nameFileIdTable:
+      CoalOrc: 299481007
+      CooperOrc: -2034144331
+      Copper: -1865966487
+      Gold: 868913364
+      GoldOrc: 450343216
+      Rock: -1365920168
+      RockNor: 1185301502
+      SilverOrc: -1067340916
       SmelterIdle: 1680119448
       Smelterwoking1: 1332518375
       Smelterwoking2: -303060315
       Smelterwoking3: -1777812942
+      coa: -2143077752
+      coal: 1525908672
+      coal1: 185361692
+      copper1: -180617428
+      copperbar: -926126135
+      goalbar: 803118761
+      gold1: 2041474732
       ore_0: 1954452237
       ore_1: 1433980431
       ore_10: 1056741124
@@ -1878,40 +1893,20 @@ TextureImporter:
       ore_41: -838701549
       ore_42: 1892731117
       ore_43: -1863416809
-      ore_44: 299481007
       ore_45: -1157446342
-      ore_46: -1067340916
-      ore_47: -2034144331
-      ore_48: 1854925349
-      ore_49: 450343216
       ore_5: -1604077430
-      ore_50: 1185301502
       ore_51: -691884661
       ore_52: 924888410
       ore_53: 1287866821
       ore_54: 1992663750
-      ore_55: 1525908672
       ore_56: 922158186
-      ore_57: -491584810
-      ore_58: -1865966487
-      ore_59: -1365920168
       ore_6: 761189158
-      ore_60: 868913364
       ore_61: 1502524887
       ore_62: -783214433
-      ore_63: 185361692
       ore_64: 1258885355
-      ore_65: 330441973
-      ore_66: -180617428
-      ore_67: -781414879
-      ore_68: 2041474732
-      ore_69: -2143077752
       ore_7: -121725796
       ore_70: -1982564946
-      ore_71: 1737409223
-      ore_72: -926126135
       ore_73: 893626547
-      ore_74: 803118761
       ore_75: -1430269820
       ore_76: -1336100761
       ore_78: -973512606
@@ -1938,6 +1933,11 @@ TextureImporter:
       ore_97: 1238117093
       ore_98: 114537575
       ore_99: -833517415
+      rock1: -781414879
+      silver: -491584810
+      silver1: 330441973
+      silverbar: 1737409223
+      vvvv: 1854925349
   mipmapLimitGroupName: 
   pSDRemoveMatte: 0
   userData: 

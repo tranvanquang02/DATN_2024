@@ -96,7 +96,7 @@ public class ObjectSpawner : MonoBehaviour
     {
         ToSave toSave = new ToSave();
 
-        for(int i = 0; i< spawnedObjects.Count; i++)
+        for(int i = 0; i < spawnedObjects.Count; i++)
         {
             if (spawnedObjects[i] != null) 
             {
@@ -115,7 +115,7 @@ public class ObjectSpawner : MonoBehaviour
         }
         ToSave toLoad = JsonUtility.FromJson<ToSave>(json);
 
-        for(int i = 0; i< toLoad.spawedObjectDatas.Count; i++)
+        for(int i = 0; i < toLoad.spawedObjectDatas.Count; i++)
         {
             SpawnedObject.SaveSpawedObjectData data = toLoad.spawedObjectDatas[i];
             GameObject go = Instantiate(spawn[data.objectID]);

@@ -161,8 +161,9 @@ public class ToolPlayerController : MonoBehaviour
                     item.OnItemUsed.OnItemUsed(item, GameManager.Instance.inventoryContainer);
                 }
             }
+            timer = toolTimeOut;
         }
-        timer = toolTimeOut;
+        
     }
 
     private int GetEnegyCost(ToolAction action)
@@ -175,11 +176,6 @@ public class ToolPlayerController : MonoBehaviour
             enegyCost = 1;
         }
         return enegyCost;
-    }
-
-    void CheckInventoryOpen()
-    {
-       
     }
     private void PickUpTile()
     {

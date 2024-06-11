@@ -333,7 +333,7 @@ TextureImporter:
       edges: []
       weights: []
     - serializedVersion: 2
-      name: plant repack_10
+      name: tree4
       rect:
         serializedVersion: 2
         x: 193
@@ -354,7 +354,7 @@ TextureImporter:
       edges: []
       weights: []
     - serializedVersion: 2
-      name: plant repack_11
+      name: bush3
       rect:
         serializedVersion: 2
         x: 351
@@ -441,7 +441,7 @@ TextureImporter:
       name: plant repack_15
       rect:
         serializedVersion: 2
-        x: 1
+        x: 0
         y: 5
         width: 126
         height: 116
@@ -459,11 +459,11 @@ TextureImporter:
       edges: []
       weights: []
     - serializedVersion: 2
-      name: plant repack_16
+      name: tree5
       rect:
         serializedVersion: 2
-        x: 129
-        y: 5
+        x: 128
+        y: 4
         width: 95
         height: 117
       alignment: 0
@@ -480,7 +480,7 @@ TextureImporter:
       edges: []
       weights: []
     - serializedVersion: 2
-      name: plant repack_17
+      name: tree6
       rect:
         serializedVersion: 2
         x: 225
@@ -537,20 +537,20 @@ TextureImporter:
       Pine2: 2042672853
       Sakura: 147396320
       Sakura1: 871599389
+      bush3: 926077743
       plant repack_0: 1051440036
-      plant repack_10: 711248901
-      plant repack_11: 926077743
       plant repack_13: -1605479987
       plant repack_14: 1230595781
       plant repack_15: 891075236
-      plant repack_16: -320908164
-      plant repack_17: 1111410802
       plant repack_3: 667874957
       plant repack_4: -560125870
       plant repack_5: 93468651
       plant repack_6: -730987810
       plant repack_7: -734499614
       plant repack_8: 2126920661
+      tree4: 711248901
+      tree5: -320908164
+      tree6: 1111410802
   mipmapLimitGroupName: 
   pSDRemoveMatte: 0
   userData: 

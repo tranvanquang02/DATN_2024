@@ -20,5 +20,9 @@ MonoBehaviour:
   OnTileMapAction: {fileID: 11400000, guid: 702b5481a9aad8345845519b3ae43ee6, type: 2}
   OnItemUsed: {fileID: 0}
   crop: {fileID: 0}
-  iconHightlight: 0
+  iconHightlight: 1
   itemPrefab: {fileID: 0}
+  isWeapon: 0
+  damage: 0
+  canSold: 0
+  price: 100

@@ -176,10 +176,10 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: a1c1cc37b410ea649a3f0fb050895cd9, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  ItemToSpawn: {fileID: 11400000, guid: b105e68d205d9d0469fffdbb3e4e483f, type: 2}
+  ItemToSpawn: {fileID: 11400000, guid: 157d711aa9e6124408f77e70a9d01875, type: 2}
   Count: 1
-  Spread: 2
-  Probability: 0.05
+  Spread: 1
+  Probability: 0.01
 --- !u!114 &5575360699254232635
 MonoBehaviour:
   m_ObjectHideFlags: 0

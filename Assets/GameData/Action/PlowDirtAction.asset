@@ -13,7 +13,8 @@ MonoBehaviour:
   m_Name: PlowDirtAction
   m_EditorClassIdentifier: 
   enegyCost: 3
+  SkillType: 0
+  skillExpReward: 100
   canPlow:
-  - {fileID: 11400000, guid: fd6627144a968914d9d02b8829afe5ea, type: 2}
-  - {fileID: 11400000, guid: b0b6d2d893ca49341ac983c36a044abe, type: 2}
+  - {fileID: 11400000, guid: 65f440e8a493d094a9490d10e2f13ff4, type: 2}
   onPlowUsed: {fileID: 0}

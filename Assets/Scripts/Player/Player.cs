@@ -157,7 +157,7 @@ public class Player : MonoBehaviour, IDamageable
 
     public void CalculateDamage(ref int damage)
     {
-        
+        damage = 4;
     }
 
     public void CheckState()

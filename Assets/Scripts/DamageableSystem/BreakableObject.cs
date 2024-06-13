@@ -12,7 +12,7 @@ public class BreakableObject : MonoBehaviour, IDamageable
 
     public void CalculateDamage(ref int damage)
     {
-        damage = 1;
+        damage = 5;
     }
 
     public void CheckState()

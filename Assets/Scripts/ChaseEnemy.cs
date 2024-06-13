@@ -1,5 +1,6 @@
 ﻿using UnityEngine;
 using System.Collections;
+using UnityEditor.Tilemaps;
 
 public class ChaseEnemy : MonoBehaviour
 {
@@ -12,56 +13,41 @@ public class ChaseEnemy : MonoBehaviour
     [SerializeField] private float timeToAttack = 2f;
     [SerializeField] private float detectionRange = 10f;
     [SerializeField] private float roamingRange = 5f;
+    public Animator animator;
 
     private float attackTimer;
     private bool isRoaming = true;
 
     private void Start()
     {
+        animator = GetComponent<Animator>();
         player = GameManager.Instance.m_PlayerController.transform;
         initialPosition = transform.position;
         attackTimer = Random.Range(0, timeToAttack);
-        StartCoroutine(MoveToPlayerCoroutine());
+        StartCoroutine(RoamingCoroutine());
     }
 
     private void Update()
     {
+        isRoaming = !CheckDistanceToFollowPlayer(player);
+        if (isRoaming == false )
+        {
+            StopAllCoroutines();
+            MoveToPlayer(player);
+        }
         Attack();
     }
 
-    IEnumerator MoveToPlayerCoroutine()
+    IEnumerator RoamingCoroutine()
     {
         while (true)
         {
-            float distanceToPlayer = Vector3.Distance(transform.position, player.position);
-            Debug.Log("Distance to player: " + distanceToPlayer);
-
-            if (distanceToPlayer <= detectionRange)
-            {
-                // Phát hiện người chơi, dừng roaming và di chuyển về phía người chơi
-                Debug.Log("Detected player, moving towards player");
-                isRoaming = false;
-                MoveToPlayer(player);
-            }
-            else if (!isRoaming)
-            {
-                // Không phát hiện người chơi và đang dừng roaming, bắt đầu roaming lại
-                Debug.Log("Player lost, start roaming");
-                isRoaming = true;
-            }
-
-            if (isRoaming)
-            {
                 // Roaming trong phạm vi xác định nếu không phát hiện người chơi
                 Vector3 newRoamingPosition = GetNewRoamingPosition();
                 Debug.Log("Roaming to new position: " + newRoamingPosition);
                 yield return Roam(newRoamingPosition);
-            }
-           /* else
-            {
-                // Đợi 2 giây trước khi kiểm tra lại
+            
                 yield return new WaitForSeconds(2.0f);
-            }*/
         }
     }
 
@@ -78,11 +64,17 @@ public class ChaseEnemy : MonoBehaviour
                 0f
             );
             newRoamingPosition = initialPosition + randomOffset;
+            RotateAnimation(newRoamingPosition);
         } while (Vector3.Distance(initialPosition, newRoamingPosition) > roamingRange);
 
         return newRoamingPosition;
     }
+    bool CheckDistanceToFollowPlayer(Transform player)
+    {
+        float distanceToPlayer = Vector3.Distance(transform.position, player.position);
 
+        return distanceToPlayer <= detectionRange;
+    }
     private IEnumerator Roam(Vector3 newRoamingPosition)
     {
         while (Vector3.Distance(transform.position, newRoamingPosition) > 0.1f)
@@ -95,16 +87,12 @@ public class ChaseEnemy : MonoBehaviour
 
     private void MoveToPlayer(Transform playerTransform)
     {
-        Debug.Log("Current Position: " + transform.position);
-        Debug.Log("Target Position: " + playerTransform.position);
-
+        RotateAnimation(player.position);
         transform.position = Vector3.MoveTowards(
             transform.position,
             playerTransform.position,
-            speed * Time.deltaTime
+            speed * Time.deltaTime  
         );
-
-        Debug.Log("New Position: " + transform.position);
     }
 
     private void Attack()
@@ -117,17 +105,23 @@ public class ChaseEnemy : MonoBehaviour
         attackTimer = timeToAttack;
         Collider2D[] targets = Physics2D.OverlapBoxAll(transform.position, attackSize, 0f);
 
-        for (int i = 0; i < targets.Length; i++)
+        foreach (var c in targets)
         {
-            Damageable player = targets[i].GetComponent<Damageable>();
-
-            if (player != null)
+            Damageable damageable = c.GetComponent<Damageable>();
+            if (damageable != null && c.gameObject.CompareTag("Player"))
             {
-                player.TakeDamage(damage);
+                damageable.TakeDamage(damage);
             }
         }
     }
+    private void RotateAnimation(Vector3 moveTo)
+    {
+        Vector3 direction = (moveTo - transform.position).normalized;
 
+
+        animator.SetFloat("horizontal", direction.x);
+        animator.SetFloat("vertical", direction.y);
+    }
     private void OnDrawGizmosSelected()
     {
         Gizmos.color = Color.red;

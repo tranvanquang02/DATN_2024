@@ -12976,7 +12976,7 @@ Transform:
   m_PrefabAsset: {fileID: 0}
   m_GameObject: {fileID: 310547966}
   m_LocalRotation: {x: 0, y: 0, z: 0, w: 1}
-  m_LocalPosition: {x: 56.4, y: 13.7, z: -10}
+  m_LocalPosition: {x: -25.4, y: 0.38, z: -10}
   m_LocalScale: {x: 1, y: 1, z: 1}
   m_ConstrainProportionsScale: 0
   m_Children:
@@ -15485,7 +15485,7 @@ Transform:
   m_PrefabAsset: {fileID: 0}
   m_GameObject: {fileID: 519420028}
   m_LocalRotation: {x: 0, y: 0, z: 0, w: 1}
-  m_LocalPosition: {x: 56.4, y: 13.7, z: -10}
+  m_LocalPosition: {x: -25.4, y: 0.38, z: -10}
   m_LocalScale: {x: 1, y: 1, z: 1}
   m_ConstrainProportionsScale: 0
   m_Children:
@@ -16424,9 +16424,17 @@ PrefabInstance:
       value: 
       objectReference: {fileID: 895603435}
     - target: {fileID: 2959383288461000606, guid: 1252131adb051b24d938241a133de752, type: 3}
+      propertyPath: hp.currVal
+      value: 100
+      objectReference: {fileID: 0}
+    - target: {fileID: 2959383288461000606, guid: 1252131adb051b24d938241a133de752, type: 3}
       propertyPath: staminaBar
       value: 
       objectReference: {fileID: 488480639}
+    - target: {fileID: 2959383288461000606, guid: 1252131adb051b24d938241a133de752, type: 3}
+      propertyPath: stamina.currVal
+      value: 100
+      objectReference: {fileID: 0}
     - target: {fileID: 2977780849971319533, guid: 1252131adb051b24d938241a133de752, type: 3}
       propertyPath: toolTimeOut
       value: 0.5
@@ -16473,11 +16481,11 @@ PrefabInstance:
       objectReference: {fileID: 0}
     - target: {fileID: 4686473781327846899, guid: 1252131adb051b24d938241a133de752, type: 3}
       propertyPath: m_LocalPosition.x
-      value: 56.4
+      value: -25.4
       objectReference: {fileID: 0}
     - target: {fileID: 4686473781327846899, guid: 1252131adb051b24d938241a133de752, type: 3}
       propertyPath: m_LocalPosition.y
-      value: 13.7
+      value: 0.38
       objectReference: {fileID: 0}
     - target: {fileID: 4686473781327846899, guid: 1252131adb051b24d938241a133de752, type: 3}
       propertyPath: m_LocalPosition.z
@@ -16510,6 +16518,14 @@ PrefabInstance:
     - target: {fileID: 4686473781327846899, guid: 1252131adb051b24d938241a133de752, type: 3}
       propertyPath: m_LocalEulerAnglesHint.z
       value: 0
+      objectReference: {fileID: 0}
+    - target: {fileID: 5744568644653994921, guid: 1252131adb051b24d938241a133de752, type: 3}
+      propertyPath: respawnPointPositon.x
+      value: 59
+      objectReference: {fileID: 0}
+    - target: {fileID: 5744568644653994921, guid: 1252131adb051b24d938241a133de752, type: 3}
+      propertyPath: respawnPointPositon.y
+      value: -1.5
       objectReference: {fileID: 0}
     - target: {fileID: 6065078468066389956, guid: 1252131adb051b24d938241a133de752, type: 3}
       propertyPath: speed

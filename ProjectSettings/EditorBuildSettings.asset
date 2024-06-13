@@ -29,4 +29,7 @@ EditorBuildSettings:
   - enabled: 1
     path: Assets/Scenes/CaveScene.unity
     guid: 77d1f4fa6cfadfd4ea675919c81a283d
+  - enabled: 1
+    path: Assets/Scenes/MazeScene.unity
+    guid: 46c7719e384dd4b4dbf9b510e42d59ac
   m_configObjects: {}

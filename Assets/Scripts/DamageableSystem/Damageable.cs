@@ -16,3 +16,4 @@ public class Damageable : MonoBehaviour
         damageable.CheckState();
     }
 }
+    

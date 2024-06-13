@@ -17,9 +17,9 @@ public class AttackController : MonoBehaviour
     {
         Vector2 postion = Rigidbody2D.position + lastMotionVector * OffsetDistance;
 
-        Collider2D[] tatget = Physics2D.OverlapBoxAll(postion, attackAreaSize, 0f);
+        Collider2D[] targets = Physics2D.OverlapBoxAll(postion, attackAreaSize, 0f);
 
-        foreach (var c in tatget)
+        foreach (var c in targets)
         {
             Damageable damageable = c.GetComponent<Damageable>();
             if(damageable != null)
@@ -27,5 +27,10 @@ public class AttackController : MonoBehaviour
                 damageable.TakeDamage(damage);
             }
         }
+    }
+    private void OnDrawGizmos()
+    {
+        Gizmos.color = Color.yellow;
+        Gizmos.DrawCube(transform.position, attackAreaSize);
     }
 }
